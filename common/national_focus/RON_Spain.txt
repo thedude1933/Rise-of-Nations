@@ -17,7 +17,619 @@ focus_tree = {
 		y = 3000
 	}
 	shared_focus = SPA_for_king_and_country
+###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	##########DNC FOCUS####################################################################################################
+	#################1933-1948#####################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
+	###############################################################################################################################
 
+	focus = {
+        id = SPR_continue_election_rigging_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 18
+        y = 0
+
+		mutually_exclusive = {
+			focus = SPR_propose_free_elections_focus
+		}
+
+        cost = 2
+
+        available = {
+            country_exists = SPR
+        }
+		allow_branch = {
+			date > 1909.12.31
+			date < 1919.1.1
+		}
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+#Historical Path
+	focus = {
+        id = SPR_guarantee_maria_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 21
+        y = 1
+		prerequisite = { focus = SPR_continue_election_rigging_focus }
+		mutually_exclusive = { focus = SPR_rally_the_restoriationists }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+#Restorianist/Nationalist Path
+	focus = {
+        id = SPR_rally_the_monarchists_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 1
+		prerequisite = { focus = SPR_continue_election_rigging_focus }
+		mutually_exclusive = { focus = SPR_guarantee_maria_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_circulate_monarchist_propaganda_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 2
+		prerequisite = { focus = SPR_rally_the_monarchists_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_march_on_madrid_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 3
+		prerequisite = { focus = SPR_circulate_monarchist_propaganda_focus }
+
+        cost = 1
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_down_with_democracy_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 4
+		prerequisite = { focus = SPR_march_on_madrid_focus }
+
+        cost = 1
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+
+	focus = {
+        id = SPR_empower_the_monarchy_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 5
+		prerequisite = { focus = SPR_down_with_democracy_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_ban_republican_parties_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 6
+		prerequisite = { focus = SPR_empower_the_monarchy_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_expand_the_ban_to_liberal_parties_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 7
+		prerequisite = { focus = SPR_ban_republican_parties_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_begin_state_censorship_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 17
+        y = 8
+		prerequisite = { focus = SPR_expand_the_ban_to_liberal_parties_focus }
+		prerequisite = { focus = SPR_please_the_reactionaries_focus }
+		
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_reduce_the_age_to_rule_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 13
+        y = 5
+		prerequisite = { focus = SPR_down_with_democracy_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_plan_alfonso_coronation_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 13
+        y = 6
+		prerequisite = { focus = SPR_reduce_the_age_to_rule_focus }
+		prerequisite = { focus = SPR_empower_the_monarchy_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_appoint_a_loyal_priest_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 13
+        y = 7
+		prerequisite = { focus = SPR_plan_alfonso_coronation_focus }
+		mutually_exclusive = { focus = SPR_appoint_a_popular_priest_focus }
+
+        cost = 3
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_appoint_a_popular_priest_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 11
+        y = 7
+		prerequisite = { focus = SPR_plan_alfonso_coronation_focus }
+		mutually_exclusive = { focus = SPR_appoint_a_loyal_priest_focus }
+
+        cost = 3
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_ready_alfonso_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 13
+        y = 8
+		prerequisite = { focus = SPR_appoint_a_loyal_priest_focus focus = SPR_appoint_a_popular_priest_focus }
+
+        cost = 0.8
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_please_the_reactionaries_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 17
+        y = 5
+		prerequisite = { focus = SPR_down_with_democracy_focus }
+
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_alfonsos_coronation_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 15
+        y = 9
+		prerequisite = { focus = SPR_begin_state_censorship_focus }
+		prerequisite = { focus = SPR_ready_alfonso_focus }
+
+        cost = 10
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_a_disaster_focus
+        icon = GFX_spr_election_rigging_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 8
+        y = 10
+		prerequisite = { focus = SPR_alfonsos_coronation_focus }
+
+        cost = 10
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+
+	#Free Elections
+	focus = {
+        id = SPR_propose_free_elections_focus
+        icon = GFX_spr_propose_free_elections_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 28
+        y = 0
+
+		mutually_exclusive = {
+			focus = SPR_continue_election_rigging_focus
+		}
+		allow_branch = {
+			date > 1909.12.31
+			date < 1919.1.1
+		}
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	#Political Thaw path
+	focus = {
+        id = SPR_political_thaw_focus
+        icon = GFX_spr_propose_free_elections_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 25
+        y = 1
+		prerequisite = { focus = SPR_propose_free_elections_focus }
+		mutually_exclusive = { focus = SPR_prepare_a_coup_focus }
+		
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_change_the_constitution_focus
+        icon = GFX_spr_propose_free_elections_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 25
+        y = 2
+		prerequisite = { focus = SPR_political_thaw_focus }
+		
+        cost = 5
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	#Coup path
+	focus = {
+        id = SPR_prepare_a_coup_focus
+        icon = GFX_spr_propose_free_elections_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 31
+        y = 1
+		prerequisite = { focus = SPR_propose_free_elections_focus  }
+		mutually_exclusive = { focus = SPR_political_thaw }
+
+        cost = 10
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+	
+	focus = {
+        id = SPR_contact_political_exiles_focus
+        icon = GFX_spr_contact_political_exiles_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 31
+        y = 2
+		prerequisite = { focus = SPR_prepare_a_coup_focus  }
+
+        cost = 2
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+
+
+#People's Coup
+	focus = {
+	    id = SPR_win_over_people_focus
+        icon = GFX_spr_win_over_people_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 31
+        y = 3
+		prerequisite = { focus = SPR_contact_political_exiles_focus }
+		mutually_exclusive = { focus = SPR_win_over_military_focus }
+
+        cost = 10
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
+
+	
+#Militaristic Coup
+	focus = {
+        id = SPR_win_over_military_focus
+        icon = GFX_spr_win_over_military_focus
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        x = 36
+        y = 3
+		prerequisite = { focus = SPR_contact_political_exiles_focus }
+		mutually_exclusive = { focus = SPR_win_over_military_focus }
+
+        cost = 10
+
+        available = {
+            country_exists = SPR
+        }
+
+        bypass = {
+            
+        }
+
+		completion_reward = {
+			
+		}
+    }
 	###############################################################################################################################
 	###############################################################################################################################
 	###############################################################################################################################
@@ -233,6 +845,12 @@ focus_tree = {
 			has_global_flag = test_features
 			date < 1949.1.1
 		}
+		available = {
+			has_global_flag = spanish_civil_war
+			NOT = {
+				has_global_flag = scw_over
+			}
+		}
 		x = 33
 		y = 1
 	}
@@ -253,9 +871,16 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_civil_war_measures
 		}
+		available = {
+			capital_scope = {
+				NOT = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
 	}
 	focus = {
-		id = SPR_great_offensive
+		id = SPR_great_offensive 
 		x = 2
 		y = 1
 		relative_position_id = SPR_civil_war_measures
@@ -402,6 +1027,9 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = SPA_for_king_and_country}
 		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+			}
 			SPR_francisco_franco = {
 				promote_character = yes
 			}
@@ -417,6 +1045,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_unify_factions}
 		completion_reward = {
 			add_war_support = 0.1
+			unlock_decision_tooltip = SPR_discuss_with_royalists
 		}
 	}
 	focus = {
@@ -852,7 +1481,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPA_CEDA}
 		completion_reward = {
 			custom_effect_tooltip = popular_front_path
-			hidden_effect = {activate_mission = SPR_military_plot_republicans country_event = { id = ww2_spain.2 days = 10} country_event = { id = ww2_spain.2 days = 20}country_event = { id = ww2_spain.2 days = 30} activate_mission = SPA_elite_troops_AI}
+			hidden_effect = {activate_mission = SPR_military_plot_republicans country_event = { id = ww2_spain.2 days = 10} country_event = { id = ww2_spain.2 days = 20} activate_mission = SPA_elite_troops_AI}
 		}
 	}
 	focus = {
@@ -896,6 +1525,8 @@ focus_tree = {
 		bypass = { has_global_flag = spanish_civil_war}
 		cost = 8
 		completion_reward = {
+			SPA = { set_country_flag = SPR_disarm_the_military_completed }
+			SPR = { set_country_flag = SPR_disarm_the_military_completed }
 			add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = -1000
@@ -1133,7 +1764,7 @@ focus_tree = {
 			focus = SPR_start_reconstruction
 			focus = SPR_reaffirm_1931_constitution
 		}
-	}
+	} 
 	focus = {
 		id = SPR_continue_autonomy_status
 		relative_position_id = SPR_reaffirm_1931_constitution
@@ -1278,6 +1909,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = {
+			focus = SPR_regional_autonomy
+			focus = SPR_anarchist_propaganda
+			
 		}
 	}
 	focus = {
@@ -1287,13 +1921,15 @@ focus_tree = {
 		x = 1
 		y = 1
 		prerequisite = {
+			focus = SPR_ressource_collectivisation
+			focus = SPR_anarchist_propaganda
 		}
 	}
 	focus = {
 		id = SPR_red_spain
 		relative_position_id = SPR_anarchist_fighters
 		icon = GFX_focus_bo_ansyns
-		x = 1
+		x = 1 
 		y = 1
 		prerequisite = {
 			focus = SPR_anarchist_fighters
@@ -1320,6 +1956,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SPR_red_spain
 		mutually_exclusive = { focus = SPR_reconcile_repulicans}
+		prerequisite = {
+			focus = SPR_red_spain
+		}
 	}
 	focus = {
 		id = SPR_autarky_economy
@@ -1330,6 +1969,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_revolution_to_the_utmost
 		}
+		completion_reward = {
+			add_ideas = closed_economy
+		}
 	}
 	focus = {
 		id = SPR_reconcile_repulicans
@@ -1337,6 +1979,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SPR_red_spain
 		mutually_exclusive = { focus = SPR_revolution_to_the_utmost}
+		prerequisite = {
+			focus = SPR_red_spain
+		}
 	}
 	focus = {
 		id = SPR_reopen_international_trade
@@ -1351,7 +1996,7 @@ focus_tree = {
 #The Will of the People
 	focus = {
 		id = SPR1933_the_will_of_the_people
-		icon = GFX_goal_support_communism
+		icon = GFX_goal_support_communism 
 		x = 39
 		y = 0
 		cost = 10
@@ -5062,7 +5707,8 @@ focus_tree = {
 			add_state_claim = 181
 			add_state_claim = 112
 			add_state_claim = 180
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = POR
 			}
@@ -5229,7 +5875,8 @@ focus_tree = {
 			add_state_claim = 181
 			add_state_claim = 112
 			add_state_claim = 180
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = POR
 			}
@@ -5268,7 +5915,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = FRA
 			}
@@ -5296,7 +5944,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = FRA
 			}
@@ -5333,7 +5982,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = FRA
 			}
@@ -5424,7 +6074,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = POR
 			}
@@ -5455,7 +6106,8 @@ focus_tree = {
 			add_state_claim = 117
 			add_state_claim = 115
 			add_state_claim = 114
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = ITA
 			}
@@ -5495,7 +6147,8 @@ focus_tree = {
 			ROOT = {
 				add_state_core = 118
 			}
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = ENG
 			}
@@ -5519,7 +6172,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = VEN
 			}
@@ -5548,7 +6202,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = COL
 			}
@@ -5599,7 +6254,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = CUB
 			}
@@ -5631,7 +6287,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = PHI
 			}
@@ -5655,7 +6312,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = PRU
 			}
@@ -5679,7 +6337,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = DOM
 			}

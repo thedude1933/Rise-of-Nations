@@ -71,9 +71,13 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
         }
-
-	    ai_will_do = { factor = 9
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1000
 			}
+		}
 		}
 		
     focus = {
@@ -107,9 +111,13 @@ focus_tree = {
 			}
         }
 
-	    ai_will_do = {
-			factor = 0
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
 			}
+		}
 		}
 
     focus = {
@@ -822,49 +830,57 @@ focus_tree = {
 				add_idea = unpolitized_high_command2 
 			}
 			if = { limit = { CHI = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = CHI
 					type = annex_everything
 				}
 			}
 			if = { limit = { PRC = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PRC
 					type = annex_everything
 				}
 			}
 			if = { limit = { GXC = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = GXC
 					type = annex_everything
 				}
 			}
 			if = { limit = { XSM = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = XSM
 					type = annex_everything
 				}
 			}
 			if = { limit = { SHX = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = SHX
 					type = annex_everything
 				}
 			}
 			if = { limit = { SIK = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = SIK
 					type = annex_everything
 				}
 			}
 			if = { limit = { MAN = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = MAN
 					type = annex_everything
 				}
 			}
 			if = { limit = { MEN = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = MEN
 					type = annex_everything
 				}
@@ -2000,49 +2016,57 @@ focus_tree = {
 				add_idea = reunification_dream3
 			}
 			if = { limit = { CHI = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = CHI
 					type = annex_everything
 				}
 			}
 			if = { limit = { PRC = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PRC
 					type = annex_everything
 				}
 			}
 			if = { limit = { GXC = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = GXC
 					type = annex_everything
 				}
 			}
 			if = { limit = { XSM = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = XSM
 					type = annex_everything
 				}
 			}
 			if = { limit = { SHX = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = SHX
 					type = annex_everything
 				}
 			}
 			if = { limit = { SIK = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = SIK
 					type = annex_everything
 				}
 			}
 			if = { limit = { MAN = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = MAN
 					type = annex_everything
 				}
 			}
 			if = { limit = { MEN = { exists = yes } }
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = MEN
 					type = annex_everything
 				}
@@ -2286,10 +2310,11 @@ focus_tree = {
 			757 = {
 				OWNER = {
 					ROOT = {
-						create_wargoal = {
+								create_wargoal = {			
+				expire = 100
 							type = annex_everything
 							target = PREV
-							expire = 0
+							
 						}
 					}
 				}
@@ -2297,10 +2322,11 @@ focus_tree = {
 			324 = {
 				OWNER = {
 					ROOT = {
-						create_wargoal = {
+								create_wargoal = {			
+				expire = 100
 							type = annex_everything
 							target = PREV
-							expire = 0
+							
 						}
 					}
 				}

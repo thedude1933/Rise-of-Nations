@@ -265,6 +265,41 @@ POL = {
 1933.1.1 = {
 	if = {
 		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		create_equipment_variant = {
+			name = "PZL P.11"
+			type = small_plane_airframe_7
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "PZL P.24"
+			type = small_plane_airframe_7
+			modules = {
+				fixed_main_weapon_slot = aircraft_cannon_1_2x
+				fixed_auxiliary_weapon_slot_1 = light_mg_2x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+		}
+		create_equipment_variant = {
+			name = "PZL P.23"
+			type = small_plane_cas_airframe_8
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = lmg_defense_turret
+			}
+		}
+	}
+	set_air_oob = "POL_1936_air_bba"
+	if = {
+		limit = {
 			has_start_date > 1932.01.01
 			has_start_date < 1946.01.01
 		}
@@ -358,6 +393,7 @@ POL = {
 }
 
 1936.1.1 = {
+	set_air_oob = "POL_1936_air_bba"
 
 	oob = "POL_1936"
 	set_naval_oob = "POL_1936_naval_legacy"

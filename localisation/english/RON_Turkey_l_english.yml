@@ -367,7 +367,7 @@
  TUR_armor_effort:0 "Armored Division"
  TUR_armor_effort_desc:0 "During the time when the firepower of our infantries are not enough, we are needed to give help by our armors. With steel and gunpowder, we will tear to pieces enemy lines."
  TUR_armor_effort_tt:0 "§GTank purchase is now available§!"
- TUR_thrace_maneuvers:0 "Thrace Maneuvers" 
+ TUR_thrace_maneuvers:0 "Italy And Germany Preform Thrace Maneuvers" 
  TUR_thrace_maneuvers_desc:0 "Italy and Germany's aggressive attempts in armament race are seen as a new war harbinger who will change borders across Europe continent. Turkish officials, especially Atatürk, plan to arrange military exercises to determine both the military capability of the armed forces and the possible measures to defend." 
  TUR_thrace_maneuvers_tt:0 "Add §Y8 Land Forts§! on the borderlines.\n"
  TUR_expand_cakmak_line:0 "Expand Çakmak Line" 
@@ -1191,6 +1191,6 @@
  TUR_independace_war:0 "The Turkish War of Independence"
  TUR_independace_war_desc:0 "The Turkish War of Independence was a series of military campaigns waged by the Turkish National Movement after parts of the Ottoman Empire were occupied and partitioned following its defeat in World War I."
  tur_war_timer:0 "Control all lost territories"
-
+tur_declare_war:0"Begin the Turkish War of Independence"
  INT_turkey.4.t:0 "Treaty of Sevres"
  INT_turkey.2.t:0 "Armistice of Mudanya"

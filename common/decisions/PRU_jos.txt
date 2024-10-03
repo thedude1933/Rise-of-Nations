@@ -61,10 +61,12 @@ political_actions = {
 				id = "ECU"
 				value = 200
 			}
-			create_wargoal = {
+			news_event = minor_1941.1
+					create_wargoal = {			
+				expire = 100
 				type = take_state_focus
 				target = ECU
-				expire = 0
+				
 				generator = { 490 }
 			}
 		}

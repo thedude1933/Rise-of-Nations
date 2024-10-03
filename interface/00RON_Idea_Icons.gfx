@@ -2214,8 +2214,28 @@ spriteType = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_RON_Protestantism"
+		texturefile = "gfx/interface/ideas/cold_war/christianity.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_RON_Orthodox_Christianity"
 		texturefile = "gfx/interface/ideas/cold_war/orthodox_christianity.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RON_Roman_Catholicism"
+		texturefile = "gfx/interface/ideas/cold_war/roman_catholicism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RON_Paganism"
+		texturefile = "gfx/interface/ideas/cold_war/paganism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RON_Taoism"
+		texturefile = "gfx/interface/ideas/cold_war/taoism.dds"
 	}
 	
 	spriteType = {
@@ -2225,6 +2245,16 @@ spriteType = {
 	
 	spriteType = {
 		name = "GFX_idea_RON_Islam"
+		texturefile = "gfx/interface/ideas/cold_war/islam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RON_Sunni_Islam"
+		texturefile = "gfx/interface/ideas/cold_war/islam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RON_Shia_Islam"
 		texturefile = "gfx/interface/ideas/cold_war/islam.dds"
 	}
 	
@@ -2442,7 +2472,7 @@ spriteType = {
 	
 	spriteType = {
 		name = "GFX_idea_RI_five_year_plan"
-		texturefile = "gfx/interface/ideas/RUS/idea_eng_spirit_of_the_industrial_revolution.dds"
+		texturefile = "gfx/interface/ideas/idea_goal_generic_construct_mil_factory.dds"
 	}
 	
 	spriteType = {
@@ -2839,11 +2869,16 @@ spriteType = {
 		name = "GFX_idea_RI_islamist_militias"
 		texturefile = "gfx/interface/ideas/cold_war/islam.dds"
 	}
+
 	spriteType = {
 		name = "GFX_idea_RI_islamist_militias1"
 		texturefile = "gfx/interface/ideas/cold_war/islam.dds"
 	}
-	
+
+	spriteType = {
+		name = "GFX_idea_communism_war"
+		texturefile = "gfx/interface/ideas/SOV_mosin.dds"
+	}	
 	
 	
 }	

@@ -95,34 +95,102 @@ bookmarks = {
 			focuses = {
 			}
 		}
+		QIN = {
+			minor = yes
+			history = "QIN_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				QIN_agrarian_society
+				QIN_opium_addictions 
+			}
+			focuses = {
+				DNC_QIN_continue_imperial_china
+				DNC_QIN_boxers 
+			}
+		}
+		COL = {
+			minor = yes
+			history = "COL_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				COL_bolivars_legacy
+				COL_a_nation_divided 
+			}
+			focuses = {
+				COL_support_panama
+				COL_1900_crash_them 
+			}
+		}		
+		SPR = {
+			minor = yes
+			history = "SPA_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				SPR_memories_of_the_spanish_american_war_idea
+				SPR_the_regency_of_maria_christina_idea 
+			}
+			focuses = {
+				SPR_continue_election_rigging_focus
+				SPR_propose_free_elections_focus 
+			}
+		}			
+		SER = {
+			minor = yes
+			history = "SER_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				SER_unpopular_monarchy
+				SER_legacy_of_serbo_bulgarian_war
+			}
+			focuses = {
+				SER_down_with_the_obrenovic
+				SER_support_the_obrevonic
+				SER_first_serbian_republic
+			}
+		}
+		KOR = {
+			minor = yes
+			history = "KOR_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				kor_gwangmu_reform
+				kor_great_game
+			}
+			focuses = {
+				KOR_with_independence_clubb
+				KOR_accept_of_article_vi_act
+				KOR_constitution
+			}
+		}
+				
+		JAP = {
+			minor = yes
+			history = "JAP_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				JAP_meiji_restoration 
+				JAP_developed_rail_network 
+				JAP_wooden_constructions
+			}
+			focuses = {
+				JAP_genjo
+				JAP_the_manchurian_crisis 
+				JAP_japanese_superiority
+			}
+		}		
+		MOR = {
+			minor = yes
+			history = "MOR_PRE_WW1_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}		
 		"---" = {
 			history = "OTHER_PRE_WW1_DESC"
-		}
-		"QIN"={
-			minor = yes
-			history = "OTHER_PRE_WW1_DESC"
-			ideology = neutrality
-			ideas = {
-				QIN_foreign_influence_zones
-				QIN_agrarian_society
-				QIN_opium_addictions
-			}
-			focuses = {
-				DNC_QIN_boxers
-				DNC_QIN_continue_imperial_china
-				DNC_QIN_the_fire_of_revolution_burns
-			}
-		}
-		"MOR"={
-			minor = yes
-			history = "OTHER_PRE_WW1_DESC"
-			ideology = neutrality
-			ideas = {
-				
-			}
-			focuses = {
-				
-			}
 		}
 		effect = {
 			randomize_weather = 22345            # <- Obligatory in every bookmark !

@@ -120,6 +120,7 @@ create_country_leader = {
 }
 
 1933.1.1 = {
+	set_air_oob = "RAJ_1936_air_bba"
 	oob = "RAJ_1933"
 	set_politics = {
 		ruling_party = neutrality
@@ -165,6 +166,7 @@ create_country_leader = {
 }
 
 1936.1.1 = {
+	set_air_oob = "RAJ_1936_air_bba"
 	set_politics = {
 		ruling_party = neutrality
 		last_election = "1935.11.14"

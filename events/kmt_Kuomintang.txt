@@ -91,7 +91,8 @@ country_event = {
 		name = kmt.1.c
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					type = annex_everything
 					target = ROOT
 				}
@@ -163,7 +164,8 @@ country_event = {
 
 	option = {
 		name = kmt.4.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = annex_everything
 			target = SHX
 		}
@@ -192,7 +194,8 @@ country_event = {
 		name = kmt.5.b
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					type = annex_everything
 					target = SHX
 				}
@@ -305,7 +308,8 @@ country_event = {
 		name = kmt.8.b
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					type = annex_everything
 					target = ROOT
 				}
@@ -341,7 +345,8 @@ country_event = {
 
 	option = {
 		name = kmt.10.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = annex_everything
 			target = FROM
 		}
@@ -685,7 +690,8 @@ country_event = {
 		name = kmt.15.b_1
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					type = take_state_focus
 					target = ROOT
 					generator = { 524 }
@@ -723,7 +729,8 @@ country_event = {
 		name = kmt.15.b_2
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					type = take_state_focus
 					target = ROOT
 					generator = { 524 }
@@ -771,7 +778,8 @@ country_event = {
 
 	option = {
 		name = kmt.17.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = FROM
 			generator = { 524 }
@@ -941,9 +949,16 @@ country_event = {
 	trigger = {
 		tag = PRC
 		NOT = { has_completed_focus = KMT_hundred_flowers_campaign }
+		NOT = { has_completed_focus = PRC_Hundred_Flowers_Campaign }
+		OR = {
 		focus_progress = {
 			focus = KMT_hundred_flowers_campaign
 			progress > 0.20
+		}
+		focus_progress = {
+			focus = PRC_Hundred_Flowers_Campaign
+			progress > 0.20
+		}
 		}
 	}
 
@@ -1016,10 +1031,17 @@ country_event = {
 
 	trigger = {
 		tag = PRC
+		NOT = { has_completed_focus = PRC_hundred_flowers_campaign }
 		NOT = { has_completed_focus = KMT_hundred_flowers_campaign }
+		OR = {
 		focus_progress = {
 			focus = KMT_hundred_flowers_campaign
 			progress > 0.40
+		}
+		focus_progress = {
+			focus = PRC_Hundred_Flowers_Campaign
+			progress > 0.40
+		}					
 		}
 	}
 
@@ -1112,10 +1134,18 @@ country_event = {
 	trigger = {
 		tag = PRC
 		NOT = { has_completed_focus = KMT_hundred_flowers_campaign }
-		focus_progress = {
+		NOT = { has_completed_focus = PRC_hundred_flowers_campaign }
+		OR = {
+			focus_progress = {
 			focus = KMT_hundred_flowers_campaign
 			progress > 0.60
 		}
+		focus_progress = {
+			focus = PRC_hundred_flowers_campaign
+			progress > 0.60
+		}				
+		}
+
 	}
 
 	immediate = {
@@ -1207,10 +1237,18 @@ country_event = {
 	trigger = {
 		tag = PRC
 		NOT = { has_completed_focus = KMT_hundred_flowers_campaign }
+		NOT = { has_completed_focus = PRC_hundred_flowers_campaign }
+		OR = {
 		focus_progress = {
 			focus = KMT_hundred_flowers_campaign
 			progress > 0.80
 		}
+		focus_progress = {
+			focus = PRC_hundred_flowers_campaign
+			progress > 0.80
+		}					
+		}
+
 	}
 
 	mean_time_to_happen = {
@@ -1858,7 +1896,8 @@ country_event = {
 		name = kmt.52.b
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = annex_everything
 				}
@@ -1916,7 +1955,8 @@ country_event = {
 					}
 				}
 				ROOT = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						target = PREV
 						type = take_state_focus
 						generator = { 330 329 618 760 617 759 287 619 }
@@ -2061,7 +2101,8 @@ country_event = {
 		name = kmt.56.b
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = annex_everything
 				}
@@ -2119,7 +2160,8 @@ country_event = {
 					}
 				}
 				ROOT = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						target = PREV
 						type = take_state_focus
 						generator = { 286 670 671 741 }
@@ -2290,7 +2332,8 @@ country_event = {
 			}
 			effect_tooltip = {
 				PRC = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						type = take_state_focus
 						target = FRA
 						generator = { 728 }
@@ -2325,7 +2368,8 @@ country_event = {
 			}
 			effect_tooltip = {
 				CHI = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						type = take_state_focus
 						target = FRA
 						generator = { 728 }
@@ -2356,7 +2400,8 @@ country_event = {
 			target = FRA
 			modifier = gzw_kept
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = FRA
 			generator = { 728 }
@@ -2684,7 +2729,8 @@ country_event = {
 			}
 			effect_tooltip = {
 				PRC = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						type = take_state_focus
 						target = ENG
 						generator = { 326 }
@@ -2713,7 +2759,8 @@ country_event = {
 			}
 			effect_tooltip = {
 				CHI = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						type = take_state_focus
 						target = ENG
 						generator = { 326 }
@@ -2744,7 +2791,8 @@ country_event = {
 			target = ENG
 			modifier = hk_kept
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = ENG
 			generator = { 326 }
@@ -2858,7 +2906,8 @@ country_event = {
 			}
 			effect_tooltip = {
 				PRC = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						type = take_state_focus
 						target = POR
 						generator = { 729 }
@@ -2887,7 +2936,8 @@ country_event = {
 			}
 			effect_tooltip = {
 				CHI = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						type = take_state_focus
 						target = POR
 						generator = { 729 }
@@ -2918,7 +2968,8 @@ country_event = {
 			target = POR
 			modifier = macau_kept
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = POR
 			generator = { 729 }
@@ -3202,7 +3253,8 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = annex_everything
 				}
@@ -3278,7 +3330,8 @@ country_event = {
 		# 	modifier = KMT_refused_unification
 		# 	target = FROM
 		# }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = annex_everything
 		}
@@ -3298,6 +3351,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
+                date > 1930.1.1
 		SHX = {
 			exists = no
 			NOT = { has_country_flag = KMT_defected_to_PRC }
@@ -3368,6 +3422,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
+                date > 1930.1.1
 		GXC = {
 			exists = no
 			NOT = { has_country_flag = KMT_defected_to_PRC }
@@ -3430,6 +3485,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
+                date > 1930.1.1
 		YUN = {
 			exists = no
 			NOT = { has_country_flag = KMT_defected_to_PRC }
@@ -3658,7 +3714,8 @@ country_event = {
 				add_political_power = 50
 			}
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = SIK
 			type = annex_everything
 		}
@@ -3781,7 +3838,8 @@ country_event = {
 		SOV = {
 			remove_from_faction = CHI
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = SIK
 			type = annex_everything
 		}
@@ -3962,7 +4020,8 @@ country_event = {
 		FROM = { country_event = { id = kmt.95 } }
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = puppet_wargoal_focus
 				}
@@ -4020,7 +4079,8 @@ country_event = {
 
 	option = {
 		name = kmt.95.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = puppet_wargoal_focus
 		}
@@ -4094,7 +4154,8 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = annex_everything
 				}
@@ -4133,7 +4194,8 @@ country_event = {
 
 	option = {
 		name = kmt.98.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = annex_everything
 		}
@@ -4343,7 +4405,8 @@ country_event = {
 		name = kmt.100.b
 		effect_tooltip = {
 			CHI = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = take_state_focus
 					generator = { 729 }
@@ -4383,7 +4446,8 @@ country_event = {
 
 	option = {
 		name = kmt.102.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = take_state_focus
 			generator = { 729 }
@@ -4448,7 +4512,8 @@ country_event = {
 		name = kmt.100.b
 		effect_tooltip = {
 			CHI = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = take_state_focus
 					generator = { 326 }
@@ -4488,7 +4553,8 @@ country_event = {
 
 	option = {
 		name = kmt.102.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = take_state_focus
 			generator = { 326 }
@@ -5061,13 +5127,15 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = puppet_wargoal_focus
 				}
 			}
 			FROM.FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = take_core_state
 				}
@@ -5114,13 +5182,15 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = puppet_wargoal_focus
 				}
 			}
 			FROM.FROM = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = take_core_state
 				}
@@ -5266,7 +5336,8 @@ country_event = {
 					}
 				}
 				ROOT = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						target = PREV
 						type = take_core_state
 					}
@@ -5303,7 +5374,8 @@ country_event = {
 
 	option = {
 		name = kmt.161.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = puppet_wargoal_focus
 		}
@@ -5322,7 +5394,8 @@ country_event = {
 
 	option = {
 		name = 162.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = take_core_state
 		}
@@ -5366,6 +5439,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
+                date > 1930.1.1
 		XSM = {
 			exists = no
 			NOT = { has_country_flag = KMT_defected_to_PRC }
@@ -5965,7 +6039,8 @@ country_event = {
 	option = {
 		name = kmt.201.b
 		add_political_power = -10
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = annex_everything
 		}
@@ -7600,7 +7675,8 @@ country_event = {
 		name = kmt.238.b
 		GER = {
 			remove_from_faction = JAP
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = JAP
 				type = puppet_wargoal_focus
 			}
@@ -7832,7 +7908,8 @@ country_event = {
 		name = kmt.238.b
 		GER = {
 			remove_from_faction = JAP
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = JAP
 				type = puppet_wargoal_focus
 			}
@@ -10024,7 +10101,8 @@ country_event = {
 		ai_chance = {
 			base = 90
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = MAN
 			type = annex_everything
 		}
@@ -12947,7 +13025,7 @@ country_event = {
 	immediate = {
 		set_global_flag = PRC_restart_chinese_civil_war
 		hidden_effect = {
-			#PRC = { country_event = { id = china.108 }}
+			PRC = { country_event = { id = china.108 }}
 		}
 	}
 
@@ -13806,7 +13884,8 @@ country_event = {
 						has_country_flag = bridge_choose_def
 					}
 				}
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = FROM
 					type = puppet_wargoal_focus
 				}
@@ -13860,7 +13939,8 @@ country_event = {
 						has_country_flag = bridge_choose_def
 					}
 				}
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = FROM
 					type = puppet_wargoal_focus
 				}
@@ -13963,7 +14043,8 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = annex_everything
 		}
@@ -14534,7 +14615,8 @@ country_event = {
 
 	option = {
 		name = kmt.359.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = puppet_wargoal_focus
 		}
@@ -14721,7 +14803,8 @@ country_event = {
 			}
 		}
 		name = kmt.366.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = PRC
 			type = annex_everything
 		}
@@ -19672,7 +19755,8 @@ country_event = {
 	option = {
 		name = kmt.350.a
 		ai_chance = { factor = 100 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = puppet_wargoal_focus
 		}
@@ -19742,7 +19826,8 @@ country_event = {
 	option = {
 		name = kmt.448.a
 		ai_chance = { factor = 100 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = annex_everything
 		}
@@ -19789,7 +19874,8 @@ country_event = {
 		ai_chance = { factor = 70 }
 		set_global_flag = KMT_CHI_no_submit_shanghai
 		FROM = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = ROOT
 				type = puppet_wargoal_focus
 			}
@@ -19825,7 +19911,8 @@ country_event = {
 	option = {
 		name = kmt.451.a
 		effect_tooltip = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = FROM
 			}
 		}
@@ -20745,7 +20832,8 @@ country_event = {
 				factor = 80
 			}
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = TIB
 			type = puppet_wargoal_focus
 		}
@@ -21209,7 +21297,8 @@ country_event = {
 			country_event = { id = kmt.489 }
 		}
 		CHI = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = SIK
 				type = annex_everything
 			}
@@ -21241,7 +21330,8 @@ country_event = {
 			}
 		}
 		CHI = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = SIK
 				type = annex_everything
 			}
@@ -22855,7 +22945,7 @@ country_event = {
 
 	option = {
 		name = kmt.517.a
-		unlock_decision_tooltip = KMT_construct_ledo_road
+		#unlock_decision_tooltip = KMT_construct_ledo_road
 	}
 }
 
@@ -24912,7 +25002,8 @@ country_event = {
 			}
 			else = {
 				FROM = {
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						target = ROOT
 						type = puppet_wargoal_focus
 					}
@@ -25012,7 +25103,8 @@ country_event = {
 	option = {
 		name = kmt.543.a
 		effect_tooltip = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = FROM
 				type = puppet_wargoal_focus
 			}
@@ -25040,7 +25132,8 @@ country_event = {
 		}
 		add_stability = -0.05
 		add_war_support = 0.05
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = puppet_wargoal_focus
 		}
@@ -25202,7 +25295,8 @@ country_event = {
 		}
 		FROM = {
 			effect_tooltip = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = annex_everything
 				}
@@ -25491,7 +25585,8 @@ country_event = {
 			base = 100
 		}
 		add_war_support = -0.025
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = civil_war
 		}
@@ -25664,7 +25759,8 @@ country_event = {
 		}
 		add_stability = -0.05
 		add_war_support = 0.05
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = take_state_focus
 			generator = { 286 670 671 741 }
@@ -25690,7 +25786,9 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
-
+		ai_chance = {
+			base = 100
+		}
 	mean_time_to_happen = { days = 2 }
 
 	immediate = {
@@ -25703,7 +25801,8 @@ country_event = {
 
 	option = {
 		name = kmt.561.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = PRC
 			type = civil_war
 		}
@@ -28045,7 +28144,8 @@ country_event = {
 		}
 		FROM = {
 			country_event = { id = kmt.598 }
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = ROOT
 				type = puppet_wargoal_focus
 			}
@@ -28085,7 +28185,8 @@ country_event = {
 	option = {
 		name = kmt.598.a
 		effect_tooltip = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = FROM
 				type = puppet_wargoal_focus
 			}
@@ -28799,7 +28900,9 @@ country_event = {
 		trigger = {
 			
 		}
-		ai_chance = { factor = 50 }
+		ai_chance = {
+			 factor = 50
+		 }
 		CHI = { puppet = ROOT }
 	}
 	option = {
@@ -28813,13 +28916,21 @@ country_event = {
 	}
 	option = {
 		name = kmt.614.c
-		ai_chance = { factor = 1 }
-		CHI = { create_wargoal = {
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				num_divisions > 50
+				factor = 200
+			}		
+		}
+		CHI = { 		create_wargoal = {			
+				expire = 100
     type = puppet_wargoal_focus
     target = ROOT
 	}
 	 }
-	 PRC = { create_wargoal = {
+	 PRC = { 		create_wargoal = {			
+				expire = 100
     type = annex_everything 
     target = ROOT
 	} 

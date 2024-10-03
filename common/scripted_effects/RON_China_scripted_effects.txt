@@ -1231,7 +1231,8 @@ PRC_create_wargoal_for_dongbei = {
 				NOT = { tag = ROOT }
 			}
 			ROOT = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PREV
 					type = take_state_focus
 				}
@@ -1260,7 +1261,8 @@ gain_central_plain_wargoal = {
 				NOT = { tag = ROOT }
 			}
 			ROOT = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PREV
 					type = take_state_focus
 				}
@@ -1290,7 +1292,8 @@ old_frontier_get_wargoal = {
 				NOT = { tag = ROOT }
 			}
 			ROOT = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PREV
 					type = take_state_focus
 				}
@@ -1311,7 +1314,8 @@ gain_fareast_wargoal = {
 				NOT = { tag = ROOT }
 			}
 			ROOT = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PREV
 					type = take_state_focus
 				}
@@ -1338,7 +1342,8 @@ KMT_north_plan_wargoal = {
 				}
 			}
 			ROOT = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PREV
 					type = take_state_focus
 				}
@@ -6884,7 +6889,8 @@ KMT_red_coup_effect_procrastinated = {
 }
 
 oust_the_coloniser_effect = {
-	create_wargoal = {
+			create_wargoal = {			
+				expire = 100
 		target = HOL
 		type = take_state_focus
 		generator = { 334 }
@@ -6904,7 +6910,8 @@ oust_the_coloniser_effect = {
 			}
 		}
 		ROOT = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = PREV
 				type = topple_government
 			}
@@ -6926,7 +6933,8 @@ oust_the_coloniser_effect = {
 		}
 		overlord = {
 			ROOT = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = PREV
 					type = topple_government
 				}
@@ -8744,6 +8752,298 @@ PRC_uprise_in_state_effect = {
 # CHI_kc_get_worse
 
 #
+#########
+health_care_get_better = {
+	if = {
+		limit = { has_idea = health_budget1 }
+		swap_ideas = {
+			remove_idea = health_budget1
+			add_idea = health_budget2
+		}
+	}
+	if = {
+		limit = { has_idea = health_budget2 }
+		swap_ideas = {
+			remove_idea = health_budget2
+			add_idea = health_budget3
+		}
+	}
+	if = {
+		limit = { has_idea = health_budget3 }
+		swap_ideas = {
+			remove_idea = health_budget3
+			add_idea = health_budget4
+		}
+	}	
+	if = {
+		limit = { has_idea = health_budget4 }
+		swap_ideas = {
+			remove_idea = health_budget4
+			add_idea = health_budget5
+		}
+	}	
+	if = {
+		limit = { has_idea = health_budget5 }
+		swap_ideas = {
+			remove_idea = health_budget5
+			add_idea = health_budget6
+		}
+	}	
+	if = {
+		limit = { has_idea = health_budget6 }
+		swap_ideas = {
+			remove_idea = health_budget6
+			add_idea = health_budget7
+		}
+	}			
+}
+###########Get Worse######
+health_care_get_worse = {
+    if = {
+        limit = { has_idea = health_budget7 }
+        swap_ideas = {
+            remove_idea = health_budget7
+            add_idea = health_budget6
+        }
+    }
+    if = {
+        limit = { has_idea = health_budget6 }
+        swap_ideas = {
+            remove_idea = health_budget6
+            add_idea = health_budget5
+        }
+    }
+    if = {
+        limit = { has_idea = health_budget5 }
+        swap_ideas = {
+            remove_idea = health_budget5
+            add_idea = health_budget4
+        }
+    }
+    if = {
+        limit = { has_idea = health_budget4 }
+        swap_ideas = {
+            remove_idea = health_budget4
+            add_idea = health_budget3
+        }
+    }
+    if = {
+        limit = { has_idea = health_budget3 }
+        swap_ideas = {
+            remove_idea = health_budget3
+            add_idea = health_budget2
+        }
+    }
+    if = {
+        limit = { has_idea = health_budget2 }
+        swap_ideas = {
+            remove_idea = health_budget2
+            add_idea = health_budget1
+        }
+    }
+}
+#tax
+taxes_get_better = {
+    if = {
+        limit = { has_idea = tax_minimal }
+        swap_ideas = {
+            remove_idea = tax_minimal
+            add_idea = tax_low
+        }
+    }
+    if = {
+        limit = { has_idea = tax_low }
+        swap_ideas = {
+            remove_idea = tax_low
+            add_idea = tax_average
+        }
+    }
+    if = {
+        limit = { has_idea = tax_average }
+        swap_ideas = {
+            remove_idea = tax_average
+            add_idea = tax_high
+        }
+    }
+    if = {
+        limit = { has_idea = tax_high }
+        swap_ideas = {
+            remove_idea = tax_high
+            add_idea = tax_extreme
+        }
+    }
+}
+
+taxes_get_worse = {
+    if = {
+        limit = { has_idea = tax_extreme }
+        swap_ideas = {
+            remove_idea = tax_extreme
+            add_idea = tax_high
+        }
+    }
+    if = {
+        limit = { has_idea = tax_high }
+        swap_ideas = {
+            remove_idea = tax_high
+            add_idea = tax_average
+        }
+    }
+    if = {
+        limit = { has_idea = tax_average }
+        swap_ideas = {
+            remove_idea = tax_average
+            add_idea = tax_low
+        }
+    }
+    if = {
+        limit = { has_idea = tax_low }
+        swap_ideas = {
+            remove_idea = tax_low
+            add_idea = tax_minimal
+        }
+    }
+}
+
+####immagration
+immigration_policy_get_better = {
+    if = {
+        limit = { has_idea = immigration_closed_borders }
+        swap_ideas = {
+            remove_idea = immigration_closed_borders
+            add_idea = immigration_heavily_regulated
+        }
+    }
+    if = {
+        limit = { has_idea = immigration_heavily_regulated }
+        swap_ideas = {
+            remove_idea = immigration_heavily_regulated
+            add_idea = immigration_lightly_regulated
+        }
+    }
+    if = {
+        limit = { has_idea = immigration_lightly_regulated }
+        swap_ideas = {
+            remove_idea = immigration_lightly_regulated
+            add_idea = immigration_open_country
+        }
+    }
+}
+
+immigration_policy_get_worse = {
+    if = {
+        limit = { has_idea = immigration_open_country }
+        swap_ideas = {
+            remove_idea = immigration_open_country
+            add_idea = immigration_lightly_regulated
+        }
+    }
+    if = {
+        limit = { has_idea = immigration_lightly_regulated }
+        swap_ideas = {
+            remove_idea = immigration_lightly_regulated
+            add_idea = immigration_heavily_regulated
+        }
+    }
+    if = {
+        limit = { has_idea = immigration_heavily_regulated }
+        swap_ideas = {
+            remove_idea = immigration_heavily_regulated
+            add_idea = immigration_closed_borders
+        }
+    }
+}
+
+##########industry
+industry_budget_get_better = {
+    if = {
+        limit = { has_idea = industry_budget1 }
+        swap_ideas = {
+            remove_idea = industry_budget1
+            add_idea = industry_budget2
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget2 }
+        swap_ideas = {
+            remove_idea = industry_budget2
+            add_idea = industry_budget3
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget3 }
+        swap_ideas = {
+            remove_idea = industry_budget3
+            add_idea = industry_budget4
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget4 }
+        swap_ideas = {
+            remove_idea = industry_budget4
+            add_idea = industry_budget5
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget5 }
+        swap_ideas = {
+            remove_idea = industry_budget5
+            add_idea = industry_budget6
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget6 }
+        swap_ideas = {
+            remove_idea = industry_budget6
+            add_idea = industry_budget7
+        }
+    }
+}
+
+industry_budget_get_worse = {
+    if = {
+        limit = { has_idea = industry_budget7 }
+        swap_ideas = {
+            remove_idea = industry_budget7
+            add_idea = industry_budget6
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget6 }
+        swap_ideas = {
+            remove_idea = industry_budget6
+            add_idea = industry_budget5
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget5 }
+        swap_ideas = {
+            remove_idea = industry_budget5
+            add_idea = industry_budget4
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget4 }
+        swap_ideas = {
+            remove_idea = industry_budget4
+            add_idea = industry_budget3
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget3 }
+        swap_ideas = {
+            remove_idea = industry_budget3
+            add_idea = industry_budget2
+        }
+    }
+    if = {
+        limit = { has_idea = industry_budget2 }
+        swap_ideas = {
+            remove_idea = industry_budget2
+            add_idea = industry_budget1
+        }
+    }
+}
 
 ##### KUOMINTANG CORRUPTION - GET BETTER
 CHI_kc_get_better = {

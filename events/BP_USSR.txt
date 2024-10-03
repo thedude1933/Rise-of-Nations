@@ -841,7 +841,7 @@ country_event = {
 
 		create_country_leader = {
 			name = "Lavrentiy Beria"
-			picture = "Portrait_SOV_Beria.dds"
+			picture = "gfx/leaders/SOV/Portrait_SOV_Beria.dds"
 			ideology = stalinism
 		}
 		remove_ideas = sov_stalins_cult_ii 
@@ -943,7 +943,7 @@ country_event = {
 			}
 			load_oob = "SOV_bitter_peace"
 		}
-	}
+	} 
 }
 # Exodus of Russian population - SOV
 country_event = {
@@ -978,6 +978,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		name = BP_USSR.16.a
 		hidden_effect = {
 			KAZ = {
 				transfer_state = 405

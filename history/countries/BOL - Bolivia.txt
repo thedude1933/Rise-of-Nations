@@ -134,7 +134,14 @@ create_country_leader = {
 }
 
 1933.1.1 = {
+	set_air_oob = "BOL_1936_air_bba"
 	oob = "BOL_1933"
+	add_ideas = {
+	bolivian_irredentism
+	BOL_foreign_monopolies
+	chaco_humillation		
+
+	}
 	set_politics = {
 		ruling_party = neutrality
 		last_election = "1933.1.1"
@@ -167,6 +174,7 @@ create_country_leader = {
 }
 
 1936.1.1 = {
+	set_air_oob = "BOL_1936_air_bba"
 	oob = "BOL_1936"
 	# Starting tech
 	set_technology = {

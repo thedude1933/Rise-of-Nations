@@ -669,6 +669,7 @@ if = {
 		election_frequency = 72
 		elections_allowed = yes
 	}
+	set_air_oob = "GER_1936_air_bba"	
 	set_popularities = {
 		fascism = 40
 		democratic = 30
@@ -751,9 +752,20 @@ if = {
 			large = "gfx/leaders/GER/portrait_ger_wilhelm_iii.dds"
 		}		
 	}
+
+	set_portraits = {
+		character = GER_wilhelm_ii
+		civilian = {
+			large = "gfx/leaders/GER/portrait_ger_wilhelm_ii.dds"
+		}
+		army = {
+			large = "gfx/leaders/GER/portrait_ger_wilhelm_ii.dds"
+		}		
+	}	
 }
 
 1933.1.1 = {
+	set_air_oob = "GER_1936_air_bba"
 	oob = "GER_1933"
 	set_naval_oob = "GER_1933_naval"
 
@@ -848,6 +860,7 @@ set_stability = 0.75
 set_war_support = 0.3
 
 1936.1.1 = {
+	set_air_oob = "GER_1936_air_bba"
 
 	oob = "GER_1936"
 	set_naval_oob = "GER_1936_naval"
@@ -906,7 +919,7 @@ set_war_support = 0.3
 
 		create_equipment_variant = {
 			name = "Do 23"
-			type = medium_plane_airframe_0
+			type = medium_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay_2
 				fixed_auxiliary_weapon_slot_1 = empty
@@ -922,7 +935,7 @@ set_war_support = 0.3
 		}
 		create_equipment_variant = {
 			name = "Ju 86"
-			type = medium_plane_airframe_0
+			type = medium_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay_2
 				fixed_auxiliary_weapon_slot_1 = empty
@@ -945,7 +958,7 @@ set_war_support = 0.3
 				fixed_auxiliary_weapon_slot_1 = medium_bomb_bay_2
 				fixed_auxiliary_weapon_slot_2 = empty
 				fixed_auxiliary_weapon_slot_3 = empty
-				engine_type_slot = engine_6_2x
+				engine_type_slot = engine_7_2x
 				special_type_slot_1 = lmg_defense_turret_2x
 				special_type_slot_2 = lmg_defense_turret_2x
 				special_type_slot_3 = empty
@@ -956,7 +969,7 @@ set_war_support = 0.3
 
 		create_equipment_variant = {
 			name = "Do 17"
-			type = small_plane_cas_airframe_0
+			type = small_plane_cas_airframe_7
 			modules = {
 				fixed_main_weapon_slot = small_bomb_bay_2
 				engine_type_slot = engine_5_2x
@@ -967,7 +980,7 @@ set_war_support = 0.3
 
 		create_equipment_variant = {
 			name = "He 51" #also covers Ar 68
-			type = small_plane_airframe_0
+			type = small_plane_airframe_7
 			modules = {
 				fixed_main_weapon_slot = light_mg_2x
 				engine_type_slot = engine_1_1x
@@ -977,7 +990,7 @@ set_war_support = 0.3
 		}
 		create_equipment_variant = {
 			name = "Hs 123"
-			type = small_plane_cas_airframe_0
+			type = small_plane_cas_airframe_7
 			modules = {
 				fixed_main_weapon_slot = bomb_locks_3
 				engine_type_slot = engine_1_1x
@@ -987,7 +1000,7 @@ set_war_support = 0.3
 		}
 		create_equipment_variant = {
 			name = "Bf 109 D"
-			type = small_plane_airframe_1
+			type = small_plane_airframe_8
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x
 				engine_type_slot = engine_2_1x
@@ -997,7 +1010,7 @@ set_war_support = 0.3
 		}
 		create_equipment_variant = {
 			name = "Ju 87"
-			type = small_plane_cas_airframe_1
+			type = small_plane_cas_airframe_8
 			modules = {
 				fixed_main_weapon_slot = bomb_locks_3
 				engine_type_slot = engine_2_1x
@@ -1008,7 +1021,7 @@ set_war_support = 0.3
 		}
 		create_equipment_variant = {
 			name = "Do 22"
-			type = small_plane_naval_bomber_airframe_1
+			type = small_plane_naval_bomber_airframe_8
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting_2
 				engine_type_slot = engine_1_1x
@@ -1324,7 +1337,8 @@ set_war_support = 0.3
 		}
 		add_named_threat = { threat = 40 name = 1939_bookmark_threat }
 
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = POL
 			generator = { 72 88 90 87 86 } # Zaolzie Krakow Kielce Lodz Poznan
@@ -1363,7 +1377,7 @@ set_war_support = 0.3
 }
 
 1940.1.1 = {
-	oob = "GER_1940"
+	oob = "GER_1936"
 	set_naval_oob = "GER_1940_naval_legacy"
 
 	### SPECIFIC 1940 STUFF
@@ -1374,9 +1388,12 @@ set_war_support = 0.3
 		}
 		add_named_threat = { threat = 40 name = 1939_bookmark_threat }
 
-		create_wargoal = { type = annex_everything target = BEL }
-		create_wargoal = { type = annex_everything target = HOL }
-		create_wargoal = { type = annex_everything target = LUX }
+				create_wargoal = {			
+				expire = 100 type = annex_everything target = BEL }
+				create_wargoal = {			
+				expire = 100 type = annex_everything target = HOL }
+				create_wargoal = {			
+				expire = 100 type = annex_everything target = LUX }
 
 	}
 
@@ -1464,7 +1481,8 @@ set_war_support = 0.3
 			has_start_date < 1942.01.01
 		}
 		add_named_threat = { threat = 40 name = 1941_bookmark_threat }
-		create_wargoal = { type = annex_everything target = SOV }
+				create_wargoal = {			
+				expire = 100 type = annex_everything target = SOV }
 		every_country = {
 			limit = { is_in_faction_with = GER }
 			add_to_war = {
@@ -1905,9 +1923,12 @@ set_war_support = 0.3
 		election_frequency = 48
 		elections_allowed = yes
 	}
+	add_ideas = RON_European_Union
 }
 
 1970.1.1 = {
+	add_ideas = RON_European_Union
+
 	oob = "GER_1970"
 	set_politics = {
 		ruling_party = democratic
@@ -1944,6 +1965,8 @@ set_war_support = 0.3
 }
 
 1980.1.1 = {
+	add_ideas = RON_European_Union
+
 	retire_character = GER_willy_brandt #democracy
 	recruit_character = GER_helmut_schmidt #democracy
 	GER_helmut_schmidt = {
@@ -1954,6 +1977,8 @@ set_war_support = 0.3
 }
 
 1990.1.1 = {
+	add_ideas = RON_European_Union
+
 	retire_character = GER_helmut_schmidt #democracy
 	recruit_character = GER_helmut_kohl #democracy
 	GER_helmut_kohl = {
@@ -1965,6 +1990,7 @@ set_war_support = 0.3
 
 
 2000.1.1 = {
+	add_ideas = RON_European_Union
 	capital = 1105
 	oob = "GER_2000"
 	set_naval_oob = "GER_2000_naval_legacy"
@@ -2025,6 +2051,8 @@ set_war_support = 0.3
 	}
 }
 2008.1.1 = {
+	add_ideas = RON_European_Union
+
 	retire_character = GER_gerhard_schroder #democracy
 
 	recruit_character = GER_angela_merkel #democracy
@@ -2036,6 +2064,8 @@ set_war_support = 0.3
 }
 
 2016.1.1 = {
+	add_ideas = RON_European_Union
+
 	oob = "GER_2016"
 	set_politics = {
 		ruling_party = democratic
@@ -2046,6 +2076,8 @@ set_war_support = 0.3
 }
 
 2020.1.1 = {
+	add_ideas = RON_European_Union
+
 	GER = {
 		set_country_leader_portrait = {
 			ideology = democratic

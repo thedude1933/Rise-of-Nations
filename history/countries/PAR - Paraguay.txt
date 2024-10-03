@@ -17,6 +17,9 @@ add_ideas = {
 	education_budget2
 	health_budget2
 	foreign_isolationism
+	learnings_of_the_chaco_war
+	guarani_communications
+	veterans_of_the_chaco	
 }
 
 set_technology = {
@@ -164,6 +167,7 @@ set_country_flag = monroe_doctrine
 }
 
 1933.1.1 = {
+	set_air_oob = "PAR_1936_air_bba"
 	oob = "PAR_1933"
 	set_politics = {
 		ruling_party = democratic
@@ -210,6 +214,7 @@ set_country_flag = monroe_doctrine
 }
 
 1936.1.1 = {
+	set_air_oob = "PAR_1936_air_bba"
 	oob = "PAR_1936"
 	# Starting tech
 	set_technology = {

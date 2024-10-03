@@ -2983,7 +2983,7 @@ RON_game_settings = {
 
 # 		}
 # 	}
-
+	
 	RON_optimisation = {
 		icon = generic_form_nation
 		complete_effect = {
@@ -3012,6 +3012,13 @@ RON_game_settings = {
 				load_focus_tree = empty
 			}
 		}
+	}
+	RON_disable_border_gore = {
+		icon = generic_form_nation
+		fire_only_once = yes
+		complete_effect = {
+			set_global_flag = disable_border_gore
+		}		
 	}
 	RON_change_era_event = {
 		icon = generic_form_nation
@@ -3050,6 +3057,7 @@ RON_game_settings = {
 		#allowed = {
 		#	is_ai = no
 		#}
+		hidden = yes
 		available = {
 			is_ai = no
 			custom_trigger_tooltip = {
@@ -3101,6 +3109,7 @@ RON_game_settings = {
 				has_global_flag = RON_weather_report_in_progress
 			}
 		}
+		hidden = yes
 		complete_effect = {
 			RON_give_russian_winter_event = yes
 		}
@@ -3111,7 +3120,7 @@ Change_Chinese_Focus_tree = {
 			RON_is_allowed_to_trigger_important_decisions = yes
 		}
 		available = {
-		date > 1950.1.19
+		date > 1949.1.19
 		is_puppet_of = JAP
 		tag = CHI
 		}
@@ -3122,7 +3131,7 @@ Change_Chinese_Focus_tree = {
 		}
 		days_re_enable = 30
 		visible = {
-		date > 1950.1.19
+		date > 1949.1.19
 		is_puppet_of = JAP
 		tag = CHI
 		}
@@ -3190,7 +3199,7 @@ Change_RAJ_focus_tree = {
 		}
 		available = {
 		date > 1933.1.01
-		date < 1950.1.19
+		date < 1949.1.19
 		tag = IND
 		}
 		cost = 0
@@ -3201,7 +3210,7 @@ Change_RAJ_focus_tree = {
 		days_re_enable = 30
 		visible = {
 		date > 1933.1.01
-		date < 1950.1.19
+		date < 1949.1.19
 		tag = IND 
 		}
 		complete_effect = {
@@ -3210,5 +3219,10 @@ Change_RAJ_focus_tree = {
 			complete_national_focus = RAJ_abolish_the_caste_system
 
 		}
+	}
+	RON_optimisation1 = {
+		icon = generic_form_nation
+		complete_effect = {
+			country_event = optimization.1
 	}
 }

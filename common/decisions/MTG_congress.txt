@@ -1,8 +1,106 @@
 USA_congress = { 
-	usa_senate_election = {
+		open_house_gui = {
+		icon = generic_industry
+
+		visible = {
+			tag = USA
+		}
+		
+		fire_only_once = no
+		cost = 0
+ 
+		complete_effect = {
+			set_country_flag = open_house_gui
+		}
+	}	
+	usa_government_peetition_FDR = {
 
 		icon = generic_decision
 
+		allowed = {
+			OR = {
+				original_tag = USA
+				original_tag = USD
+			}
+			 
+		}
+		activation = {
+			has_government = democratic
+			OR = {
+			has_country_leader = {ruling_only = yes name = "Franklin Delano Roosevelt" }			
+			has_country_leader = {ruling_only = yes name = "Herbert Hoover" }				
+			}
+			is_ai = no
+		}
+		available = {	
+			if = {
+				limit = {
+					has_country_leader = {ruling_only = yes name = "Herbert Hoover" }	
+					date > 1936.1.1		
+				}
+			has_country_leader = {ruling_only = yes name = "Herbert Hoover" }
+			has_war = no
+			NOT = {
+				has_idea = great_depression 
+			}
+			}					
+			if = {
+				limit = {
+					has_country_leader = {ruling_only = yes name = "Franklin Delano Roosevelt" }			
+				}
+			has_country_leader = {ruling_only = yes name = "Franklin Delano Roosevelt" }
+			has_completed_focus = USA_Proclaim_American_Neutrality
+			NOT = {
+				has_idea = great_depression 
+			}
+			}
+		}
+		days_mission_timeout = 1460
+
+		fire_only_once = no
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_government = democratic
+		}
+		is_good = no
+		timeout_effect  = {
+			custom_effect_tooltip = usaleaderagenda
+839 = { usa_gop_up = yes }
+836 = { usa_gop_up = yes }
+374 = { usa_gop_up = yes }
+384 = { usa_gop_up = yes }
+395 = { usa_gop_up = yes }
+376 = { usa_gop_up = yes }
+391 = { usa_gop_up = yes }
+392 = { usa_gop_up = yes }
+390 = { usa_gop_up = yes }
+379 = { usa_gop_up = yes }
+261 = { usa_gop_up = yes }
+366 = { usa_gop_up = yes }
+362 = { usa_gop_up = yes }
+358 = { usa_gop_up = yes }
+883 = { usa_gop_up = yes }
+369 = { usa_gop_up = yes }
+388 = { usa_gop_up = yes }
+371 = { usa_gop_up = yes }
+382 = { usa_gop_up = yes }
+380 = { usa_gop_up = yes }
+360 = { usa_gop_up = yes }
+383 = { usa_gop_up = yes }
+365 = { usa_gop_up = yes }
+838 = { usa_gop_up = yes }
+364 = { usa_gop_up = yes }
+			USA_house_large_opposition = yes
+			USA_senate_large_opposition = yes
+		}
+	}			
+	usa_senate_election = {
+
+		icon = generic_decision
+		priority = 60
 		allowed = {
 			OR = {
 				original_tag = USA
@@ -30,24 +128,7 @@ USA_congress = {
 		}
 
 		timeout_effect  = {
-					random_list = {
-			20 = {
-				USA_senate_large_opposition = yes
-				USA_senate_large_opposition = yes
-			}
-			20 = {
-				USA_senate_medium_opposition = yes
-			}
-			20 = {
-				add_political_power = -10
-			}
-			20 = {
-				USA_senate_medium_support = yes
-			}
-			20 = {
-				USA_senate_large_support = yes
-			}
-		}
+		USA_senate_election = yes
 		activate_mission = usa_senate_election
 		}
 	}
@@ -150,9 +231,7 @@ USA_congress = {
 		}
 			
 	}
-	
-		
-		
+
 	usa_house_election = {
 
 		icon = generic_decision
@@ -170,8 +249,8 @@ USA_congress = {
 		available = {
 		     NOT = { has_government = democratic }
 		}
-		    days_mission_timeout = 250
-
+		    days_mission_timeout = 310
+		priority = 50
 		#cost = 0
 		fire_only_once = no
 		days_remove = 14
@@ -184,23 +263,9 @@ USA_congress = {
 		}
 
 		timeout_effect  = {
-					random_list = {
-			20 = {
-				USA_house_large_opposition = yes
-				USA_house_large_opposition = yes
-			}
-			20 = {
-				USA_house_medium_opposition = yes
-			}
-			20 = {
-				add_political_power = -10
-			}
-			20 = {
-				USA_house_medium_support = yes
-			}
-			20 = {
-				USA_house_large_support = yes
-				USA_house_large_support = yes
+			custom_effect_tooltip = house_predection			
+			hidden_effect = {
+			country_event = usa.301
 			}
 		}
 		activate_mission = usa_house_election
@@ -248,7 +313,7 @@ USA_congress = {
 		available = {
 			has_civil_war = no
 		}
-
+		priority = 60
 		cost = 100
 		fire_only_once = no
 		days_remove = 20
@@ -331,20 +396,21 @@ USA_congress = {
 
 		complete_effect  = {
 			add_stability = -0.05
-					random_list = {
-			50 = {
-				USA_house_medium_support = yes
-				USA_senate_medium_support = yes
-				USA_senate_medium_support = yes
-			}
-			50 = {
-				USA_house_large_support = yes				
-				USA_house_large_support = yes
-				USA_house_large_support = yes
-				USA_senate_medium_support = yes
-				USA_senate_medium_support = yes
-			}
-		}
+			scripted_gui = RN_marpac
+		#			random_list = {
+		#	50 = { 
+		#		USA_house_medium_support = yes
+		#		USA_senate_medium_support = yes
+		#		USA_senate_medium_support = yes
+		#	}
+		#	50 = {
+		#		USA_house_large_support = yes				
+		#		USA_house_large_support = yes
+		#		USA_house_large_support = yes
+		#		USA_senate_medium_support = yes
+		#		USA_senate_medium_support = yes
+		#	}
+		#}
 		}
 	}
 #

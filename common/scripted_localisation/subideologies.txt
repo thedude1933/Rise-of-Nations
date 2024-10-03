@@ -904,6 +904,18 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_country_leader_ideology = revisionism
+		}
+		localization_key = revisionism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = left_communism
+		}
+		localization_key = left_communism
+	}
+	text = {
+		trigger = {
 			has_country_leader_ideology = guevarism
 		}
 		localization_key = guevarism
@@ -1115,4 +1127,10 @@ defined_text = {
 		}
 		localization_key = is_intergov
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = semi_constitutional_monarchy
+		}
+		localization_key = semi_constitutional_monarchy
+	}	
 }

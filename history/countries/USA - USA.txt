@@ -4,6 +4,208 @@ enable_propaganda_campaigns = yes
 
 capital = 361
 oob = "USA_1900"
+1900.1.1 = {
+	set_variable = { HOUSE_party1_seats = 50 }
+	set_variable = { HOUSE_party2_seats = 200 }
+	set_variable = { HOUSE_party3_seats = 155 }
+	set_variable = { HOUSE_party4_seats = 30 }
+	add_ideas = {
+		USA_jim_crow_laws
+		USA_scars_of_1865
+		USA_the_gold_standard
+		USA_american_imperialism
+		USA_the_two_party_system
+		USA_fully_industrialized_society
+	}
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1910.1.1 = {
+	set_variable = { HOUSE_party1_seats = 20 }
+	set_variable = { HOUSE_party2_seats = 220 }
+	set_variable = { HOUSE_party3_seats = 160 }
+	set_variable = { HOUSE_party4_seats = 35 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1919.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 240 }
+	set_variable = { HOUSE_party3_seats = 193 }
+	set_variable = { HOUSE_party4_seats = 2 }
+	set_country_flag = republican_wins_election
+set_country_flag = goppres
+}
+
+1933.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 117 }
+	set_variable = { HOUSE_party3_seats = 313 }
+	set_variable = { HOUSE_party4_seats = 5 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+remove_ideas = {
+	idea = USA_scars_of_1865
+}
+}
+
+1936.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 88 }
+	set_variable = { HOUSE_party3_seats = 334 }
+	set_variable = { HOUSE_party4_seats = 13 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1939.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 169 }
+	set_variable = { HOUSE_party3_seats = 257 }
+	set_variable = { HOUSE_party4_seats = 9 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1940.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 162 }
+	set_variable = { HOUSE_party3_seats = 267 }
+	set_variable = { HOUSE_party4_seats = 6 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1941.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 162 }
+	set_variable = { HOUSE_party3_seats = 267 }
+	set_variable = { HOUSE_party4_seats = 6 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1942.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 209 }
+	set_variable = { HOUSE_party3_seats = 222 }
+	set_variable = { HOUSE_party4_seats = 4 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1943.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 209 }
+	set_variable = { HOUSE_party3_seats = 222 }
+	set_variable = { HOUSE_party4_seats = 4 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1944.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 212 }
+	set_variable = { HOUSE_party3_seats = 222 }
+	set_variable = { HOUSE_party4_seats = 1 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1946.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 246 }
+	set_variable = { HOUSE_party3_seats = 188 }
+	set_variable = { HOUSE_party4_seats = 1 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+remove_ideas = {
+	USA_the_gold_standard
+}
+}
+
+1949.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 171 }
+	set_variable = { HOUSE_party3_seats = 263 }
+	set_variable = { HOUSE_party4_seats = 1 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1960.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 153 }
+	set_variable = { HOUSE_party3_seats = 283 }
+	set_variable = { HOUSE_party4_seats = 0 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+1970.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 192 }
+	set_variable = { HOUSE_party3_seats = 243 }
+	set_variable = { HOUSE_party4_seats = 0 }
+	set_country_flag = republican_wins_election
+set_country_flag = goppres
+}
+
+1980.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 192 }
+	set_variable = { HOUSE_party3_seats = 243 }
+	set_variable = { HOUSE_party4_seats = 0 }
+	set_country_flag = republican_wins_election
+set_country_flag = goppres
+}
+
+1990.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 167 }
+	set_variable = { HOUSE_party3_seats = 267 }
+	set_variable = { HOUSE_party4_seats = 1 }
+	set_country_flag = republican_wins_election
+set_country_flag = goppres
+}
+
+2000.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 222 }
+	set_variable = { HOUSE_party3_seats = 210 }
+	set_variable = { HOUSE_party4_seats = 3 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+2008.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 178 }
+	set_variable = { HOUSE_party3_seats = 257 }
+	set_variable = { HOUSE_party4_seats = 0 }
+	set_country_flag = republican_wins_election
+set_country_flag = goppres
+}
+
+2013.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 234 }
+	set_variable = { HOUSE_party3_seats = 201 }
+	set_variable = { HOUSE_party4_seats = 0 }
+	set_country_flag = democratic_wins_election
+set_country_flag = dempres
+}
+
+2020.1.1 = {
+	set_variable = { HOUSE_party1_seats = 0 }
+	set_variable = { HOUSE_party2_seats = 211 }
+	set_variable = { HOUSE_party3_seats = 222 }
+	set_variable = { HOUSE_party4_seats = 2 }
+	set_country_flag = republican_wins_election
+set_country_flag = goppres
+}
 
 set_variable = { USA_neutrality_support = 90 }
 set_variable = { USA_ENT_support = 5 }
@@ -11,41 +213,13 @@ set_variable = { USA_CP_support = 5 }
 set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
-set_variable = {
-	var = senators_support
-	value = 48
-}
-
-set_variable = {
-	var = senators_total
-	value = 96
-}
-
-set_variable = {
-	var = representatives_support
-	value = 218
-}
-
-set_variable = {
-	var = representatives_total
-	value = 435
-}
-
-set_variable = {
-	var = quorum_low
-	value = 39
-}
-
-set_variable = {
-	var = quorum_medium
-	value = 49
-}
-
-set_variable = {
-	var = quorum_high
-	value = 58
-}
-
+set_variable = { var = senators_support value = 48 }
+set_variable = { var = senators_total value = 96 }
+set_variable = { var = representatives_support value = 218 }
+set_variable = { var = representatives_total value = 435 }
+set_variable = { var = quorum_low value = 39 }
+set_variable = { var = quorum_medium value = 49 }
+set_variable = { var = quorum_high value = 58 }
 USA_recalc_congress_icon_frames = yes
 #Monroe Doctrine
 give_guarantee = CAN
@@ -107,19 +281,22 @@ add_ideas = {
 
 if = {
 	limit = {
-		has_start_date < 1910.01.01
+		has_start_date < 1910.1.1
 	}
+
 	add_ideas = {
+		USA_jim_crow_laws
 		USA_scars_of_1865
 		USA_the_gold_standard
+		USA_american_imperialism
+		USA_the_two_party_system
 		USA_fully_industrialized_society
-		foreign_American_Imperialism
 	}
 }
 
 if = {
 	limit = {
-		has_start_date < 1964.01.01
+		has_start_date < 1964.1.1
 	}
 	add_ideas = {
 		USA_jim_crow_laws
@@ -422,7 +599,7 @@ recruit_character = USA_harry_s_truman
 	recruit_character = USA_ellen_pawlikowski
 	recruit_character = USA_john_raymond
 	recruit_character = USA_carlton_everhart_ii
-	recruit_character = USA_terrence_o`shaughnessy
+	#recruit_character = USA_terrence_o`shaughnessy
 	recruit_character = USA_tod_wolters
 	recruit_character = USA_joseph_harrington
 	recruit_character = USA_michael_garrett
@@ -490,7 +667,7 @@ if = {
 
 if = {
 	limit = {
-		has_start_date < 1930.01.01
+		has_start_date < 1930.1.1
 	}
 	recruit_character = USA_albert_winterhalter
 	recruit_character = USA_frank_fletcher
@@ -515,8 +692,8 @@ if = {
 1910.1.1 = {
 	if = {
 		limit = {
-			has_start_date > 1909.01.01
-			has_start_date < 1919.01.01
+			has_start_date > 1900.1.1
+			has_start_date < 1919.1.1
 		}
 		country_lock_all_division_template = yes
 		add_ideas = ww1_neutrality
@@ -632,7 +809,15 @@ if = {
 
 1919.1.1 = {
 	oob = "USA_1919"
-
+	set_air_oob = "USA_1939_air_legacy"
+			set_technology = {
+				fighter1 = 1
+				cv_fighter1 = 1
+				heavy_fighter1 = 1
+				tactical_bomber1 = 1
+				CAS2 = 1
+				strategic_bomber1 = 1
+			}	
 	set_politics = {
 		ruling_party = democratic
 		last_election = "1916.11.7"
@@ -650,6 +835,15 @@ if = {
 }
 
 1920.1.1 = {
+	set_air_oob = "USA_1939_air_legacy"
+			set_technology = {
+				fighter1 = 1
+				cv_fighter1 = 1
+				heavy_fighter1 = 1
+				tactical_bomber1 = 1
+				CAS2 = 1
+				strategic_bomber1 = 1
+			}		
 	if = {
 		limit = {
 			has_start_date > 1919.01.17
@@ -662,6 +856,20 @@ if = {
 }
 
 1933.1.1 = {
+set_variable = { HOUSE_party1_seats = 0 }
+set_variable = { HOUSE_party2_seats = 117 }
+set_variable = { HOUSE_party3_seats = 313 }
+set_variable = { HOUSE_party4_seats = 5 }
+
+	set_air_oob = "USA_1939_air_legacy"
+			set_technology = {
+				fighter1 = 1
+				cv_fighter1 = 1
+				heavy_fighter1 = 1
+				tactical_bomber1 = 1
+				CAS2 = 1
+				strategic_bomber1 = 1
+			}	
 	create_dynamic_country = {
 	    original_tag = USA
 	    set_country_flag = USA_SSA_flag
@@ -717,8 +925,8 @@ if = {
 	# }
 	if = {
 		limit = {
-			has_start_date > 1932.01.01
-			has_start_date < 1949.01.01
+			has_start_date > 1932.1.1
+			has_start_date < 1949.1.1
 		}
 
 		add_ideas = {
@@ -727,6 +935,7 @@ if = {
 			disarmed_nation
 			free_trade
 			#home_of_the_free
+			foreign_isolationism 
 			usa_the_united_states_army
 			usa_the_fed
 			usa_american_engineering
@@ -789,7 +998,7 @@ if = {
 	if = {
 		limit = {
 			has_start_date > 1932.12.31
-			has_start_date < 1949.01.01
+			has_start_date < 1949.1.1
 		}
 		
 
@@ -798,14 +1007,197 @@ if = {
 }
 
 1936.1.1 = {
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		create_equipment_variant = {
+			name = "P-6" #export models only
+			type = small_plane_airframe_7
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "P-26A" #
+			type = small_plane_airframe_7
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			obsolete = yes
+			icon = "GFX_USA_light_plane_2_medium"
+		}
+		create_equipment_variant = {
+			name = "O2U" #
+			type = small_plane_cas_airframe_7
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				fixed_auxiliary_weapon_slot_1 = light_mg_2x
+				engine_type_slot = engine_1_1x
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "SBU Corsair" #
+			type = cv_small_plane_cas_airframe_0
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = dive_brakes_small
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "BM-2" #
+			type = cv_small_plane_naval_bomber_airframe_0
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "A-12" #
+			type = small_plane_cas_airframe_7
+			modules = {
+				fixed_main_weapon_slot = bomb_locks
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			obsolete = yes
+			icon = "GFX_USA_CAS1_medium"
+		}
+		create_equipment_variant = {
+			name = "A-17" #
+			type = small_plane_cas_airframe_8
+			modules = {
+				fixed_main_weapon_slot = small_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_USA_CAS1_medium"
+		}
+		create_equipment_variant = {
+			name = "P-35A" #
+			type = small_plane_airframe_8
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_USA_light_plane_4_medium"
+		}
+		create_equipment_variant = {
+			name = "P-36A" #
+			type = small_plane_airframe_8
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 = light_mg_2x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_USA_fighter1_medium"
+		}
+		create_equipment_variant = {
+			name = "B-6A" #also covers other Keystone bombers
+			type = medium_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				engine_type_slot = engine_1_2x
+				special_type_slot_1 = lmg_defense_turret
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "B-10" #
+			type = medium_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				engine_type_slot = engine_1_2x
+				special_type_slot_1 = lmg_defense_turret
+			}
+			icon = "GFX_medium_plane_1_medium"
+		}
+		create_equipment_variant = {
+			name = "B-18" #
+			type = medium_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				engine_type_slot = engine_2_2x
+				special_type_slot_1 = lmg_defense_turret
+			}
+			icon = "GFX_USA_early_bomber_medium"
+		}
+		create_equipment_variant = {
+			name = "P2Y" #
+			type = medium_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = bomb_locks
+				engine_type_slot = engine_2_2x
+				special_type_slot_1 = flying_boat_medium
+				special_type_slot_2 = lmg_defense_turret
+			}
+			obsolete = yes
+			icon = "GFX_USA_naval_bomber1_medium"
+		}
+		create_equipment_variant = {
+			name = "PBY" #
+			type = medium_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+				fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+				engine_type_slot = engine_2_2x
+				special_type_slot_1 = flying_boat_medium
+				special_type_slot_2 = lmg_defense_turret
+			}
+			icon = "GFX_USA_naval_bomber1_medium"
+		}
+		create_equipment_variant = {
+			name = "F4B" #also covers F2F
+			type = cv_small_plane_airframe_0
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			obsolete = yes
+			icon = "GFX_USA_cv_fighter1_medium"
+		}
+		create_equipment_variant = {
+			name = "F3F" #
+			type = cv_small_plane_airframe_0
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_USA_cv_fighter1_medium"
+		}
+		set_air_oob = "USA_1936_air_bba"
+		else = {
+			set_air_oob = "USA_1936_air_legacy"
+		}
+	}
+	
 	
 	remove_ideas = ww1_neutrality
 	country_lock_all_division_template = no
-
+	
 	if = {
 		limit = {
-			has_start_date > 1935.01.01
-			has_start_date < 1949.01.01
+			has_start_date > 1935.1.1
+			has_start_date < 1949.1.1
 		}
 		# DIPLOMACY
 		set_autonomy = {
@@ -816,8 +1208,8 @@ if = {
 
 	if = {
 		limit = {
-			has_start_date > 1935.01.01
-			has_start_date < 1947.01.01
+			has_start_date > 1935.1.1
+			has_start_date < 1947.1.1
 		}
 		add_ideas = {
 			usa_social_security
@@ -827,8 +1219,8 @@ if = {
 	if = {
 		limit = {
 			has_dlc = "Man the Guns"
-			has_start_date > 1935.01.01
-			has_start_date < 1948.01.01
+			has_start_date > 1935.1.1
+			has_start_date < 1948.1.1
 		}
 		add_ideas = MTG_naval_treaty_adherent
 	}
@@ -1083,8 +1475,8 @@ if = {
 	#### WW2 War Mobilization
 	if = {
 		limit = {
-			has_start_date > 1939.01.01
-			has_start_date < 1946.01.01
+			has_start_date > 1939.1.1
+			has_start_date < 1946.1.1
 		}
 		add_ideas = {
 			war_economy
@@ -1150,8 +1542,8 @@ if = {
 	}
 	if = {
 		limit = {
-			has_start_date > 1945.01.01
-			has_start_date < 1961.01.01
+			has_start_date > 1945.1.1
+			has_start_date < 1961.1.1
 		}
 		add_ideas = {
 			operation_paperclip_usa
@@ -1160,8 +1552,8 @@ if = {
 	# JAPANESE OCCUPATION
 	if = {
 		limit = {
-			has_start_date > 1945.01.01
-			has_start_date < 1952.01.01
+			has_start_date > 1945.1.1
+			has_start_date < 1952.1.1
 		}
 		if = {
 			limit = {
@@ -1182,8 +1574,8 @@ if = {
 	}
 	if = {
 		limit = {
-			has_start_date > 1945.01.01
-			has_start_date < 1990.01.01
+			has_start_date > 1945.1.1
+			has_start_date < 1990.1.1
 		}
 		give_guarantee = GER
 	}
@@ -1191,7 +1583,7 @@ if = {
 	set_global_flag = RON_Allies_disbanded
 	if = {
 		limit = {
-			has_start_date > 1945.01.01
+			has_start_date > 1945.1.1
 		}
 		create_faction = NorthAtlantic
 		add_to_faction = BEL
@@ -1257,8 +1649,8 @@ if = {
 
 	if = {
 		limit = {
-			has_start_date > 1949.01.01
-			has_start_date < 2000.01.01
+			has_start_date > 1949.1.1
+			has_start_date < 2000.1.1
 		}
 		
 	}
@@ -1274,7 +1666,7 @@ if = {
 1955.1.1 = {
 	if = {
 		limit = {
-			has_start_date > 1948.01.01
+			has_start_date > 1948.1.1
 		}
 		add_to_faction = GER
 	}
@@ -1329,7 +1721,9 @@ if = {
 	set_popularities = {
 		democratic = 100
 	}
-
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}
 	retire_character = USA_george_lincoln_rockwell #fascism
 	retire_character = USA_the_grand_council #neutral
 
@@ -1362,6 +1756,9 @@ if = {
 		election_frequency = 48
 		elections_allowed = yes
 	}
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 	retire_character = USA_richard_nixon #democracy
 	recruit_character = USA_jimmy_carter #democracy
 	USA_jimmy_carter = {
@@ -1373,6 +1770,9 @@ if = {
 
 1982.1.1 = {
 	add_to_faction = SPR
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 }
 
 1990.1.1 = {
@@ -1389,15 +1789,24 @@ if = {
 			Ideology = conservatism
 		}
 	}
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 }
 
 1999.1.1 = {
 	add_to_faction = CZE
 	add_to_faction = HUN
 	add_to_faction = POL
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 }
 
 2000.1.1 = {
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 	oob = "USA_2000"
 	set_naval_oob = "USA_2000_naval_legacy"
 	set_politics = {
@@ -1442,7 +1851,7 @@ if = {
 
 	if = {
 		limit = {
-			has_start_date > 2000.01.01
+			has_start_date > 2000.1.1
 		}
 		
 	}
@@ -1455,14 +1864,23 @@ if = {
 	add_to_faction = BUL
 	add_to_faction = ROM
 	add_to_faction = SLO
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 	add_to_faction = SLV
 }
 
 2009.1.1 = {
 	add_to_faction = ALB
 	add_to_faction = CRO
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 }
 2008.1.1 = {
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 	set_politics = {
 		ruling_party = democratic
 		last_election = "2004.11.3"
@@ -1478,6 +1896,9 @@ if = {
 	}
 }
 2016.1.1 = {
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 	oob = "USA_2016"
 	set_politics = {
 		ruling_party = democratic
@@ -1513,9 +1934,15 @@ if = {
 
 2017.1.1 = {
 	add_to_faction = MNT
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 }
 
 2020.1.1 = {
+	remove_ideas = {
+		idea = USA_jim_crow_laws
+	}	
 	set_politics = {
 		ruling_party = democratic
 		last_election = "2016.11.3"

@@ -12,6 +12,7 @@ Meridiem-Ossetia
 Mikegent
 Harry/Dr.SuiuS
 Nugget
+nikolafun
 Noremac2000
 Manul/Evgeny Korovin
 Mstae67
@@ -23,6 +24,8 @@ Vinctories
 Bob1234567890
 egzs
 Sự Báo Thù
+Itadakii
+Włatca Krulestfa
 
 #SPECIAL THANKS TO
 
@@ -34,12 +37,14 @@ cameron
 Camcompco
 CirclePete
 concrete
+Commander Giray
 Connor
 CrankyRack
 Dackydc
 DevinPurcell
 Dr. Ludwig
 DuKe
+Ergovius
 FilU1916
 FluffyFishCreations
 FoxDie24
@@ -50,8 +55,11 @@ Herman_Lindqvist
 JaK
 JonathanH
 Kingspel
+Lehmspielt
+Le Kiwi Suisse
 Limmony
 LordBuisness1945/Frosty
+Lukedy
 Lyylikki
 m_belonosov
 machotacoman
@@ -60,6 +68,7 @@ Max200012
 Metooxas
 MikeTheGibus
 Molvanîa
+Mord
 Mr. Confused
 Nadine Franklin
 Net2025
@@ -81,13 +90,14 @@ vikkar
 VladimirLemon
 Walk
 Wanwangrr
-Włatca Krulestfa
+yamanges
 Yeet0654/Yeet6054
 Yiğit
 YoanMeister
 
 #MODS SPECIAL THANKS
 
+Après Nous Le Déluge
 A Swedish Tiger
 Allied Construction Projects
 American Rework
@@ -100,8 +110,10 @@ Better Nukes
 Bitter Peace - New World Order
 BlackIce
 British Overhaul
+Chant of the Forgotten
 Colored Events
 CommunistGer
+Cronstedt's Treachery
 Deutschland Erwache 2
 DoomsdayZom
 Endsieg

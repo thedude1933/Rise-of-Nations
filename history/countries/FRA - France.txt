@@ -293,7 +293,34 @@ if = {
 	}
 	puppet = VIN
 }
-
+#FRENCH PARLIAMENT 1910
+add_to_array = { parliament_seat_array = 0 } # SFIC
+add_to_array = { parliament_seat_array = 89 } # PRRRS-PRS
+add_to_array = { parliament_seat_array = 34 } # SFIO
+add_to_array = { parliament_seat_array = 22 } # AD
+add_to_array = { parliament_seat_array = 0 } # PDP
+add_to_array = { parliament_seat_array = 44 } # FR
+add_to_array = { parliament_seat_array = 11 } # INDEP
+add_to_array = { parliament_seat_array = 0 } #AF
+# parliament_member_array stores the list of parties
+# This basically assigns an id for each party, so Party A = 1, Party B = 2, etc. (must start from 1 and is in order)
+add_to_array = { parliament_member_array = 1 } # SFIC
+add_to_array = { parliament_member_array = 2 } # PRRRS
+add_to_array = { parliament_member_array = 3 } # SFIO
+add_to_array = { parliament_member_array = 4 } # AD
+add_to_array = { parliament_member_array = 5 } # PDP
+add_to_array = { parliament_member_array = 6 } # FR
+add_to_array = { parliament_member_array = 7 } # INDEP
+add_to_array = { parliament_member_array = 8 } # AF
+# Set up the positions of the dots for the semicircle parliament
+parliament_gui_positions = yes
+# Modify what shows up in the gui
+reload_parliament_gui = yes
+set_variable = {
+	president_du_conseil_legitimacy = 85
+}
+### WW1 Start Date
+set_country_flag = briand_president_du_conseil
 1900.02.01 = {
 	if = {
 		limit = {
@@ -323,36 +350,7 @@ if = {
 1910.1.1 = {
 
 	add_ideas = FRA_cheminots_strike
-	#FRENCH PARLIAMENT 1910
-	add_to_array = { parliament_seat_array = 0 } # SFIC
-	add_to_array = { parliament_seat_array = 89 } # PRRRS-PRS
-	add_to_array = { parliament_seat_array = 34 } # SFIO
-	add_to_array = { parliament_seat_array = 22 } # AD
-	add_to_array = { parliament_seat_array = 0 } # PDP
-	add_to_array = { parliament_seat_array = 44 } # FR
-	add_to_array = { parliament_seat_array = 11 } # INDEP
-	add_to_array = { parliament_seat_array = 0 } #AF
-
-	# parliament_member_array stores the list of parties
-	# This basically assigns an id for each party, so Party A = 1, Party B = 2, etc. (must start from 1 and is in order)
-	add_to_array = { parliament_member_array = 1 } # SFIC
-	add_to_array = { parliament_member_array = 2 } # PRRRS
-	add_to_array = { parliament_member_array = 3 } # SFIO
-	add_to_array = { parliament_member_array = 4 } # AD
-	add_to_array = { parliament_member_array = 5 } # PDP
-	add_to_array = { parliament_member_array = 6 } # FR
-	add_to_array = { parliament_member_array = 7 } # INDEP
-	add_to_array = { parliament_member_array = 8 } # AF
-	# Set up the positions of the dots for the semicircle parliament
-	parliament_gui_positions = yes
-
-	# Modify what shows up in the gui
-	reload_parliament_gui = yes
-	set_variable = {
-		president_du_conseil_legitimacy = 85
-	}
-	### WW1 Start Date
-	set_country_flag = briand_president_du_conseil
+	
 	if = {
 		limit = {
 			has_start_date > 1909.01.01
@@ -523,6 +521,7 @@ if = {
 }
 
 1933.1.1 = {
+	set_air_oob = "FRA_1936_air_bba"
 			                    set_rule = {
                          can_join_factions = yes
                     }
@@ -636,6 +635,7 @@ if = {
 }
 
 1936.1.1 = {
+	set_air_oob = "FRA_1936_air_bba"
 
 	### French Guarantees
 	if = {
@@ -735,7 +735,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Br. 19" #
-			type = small_plane_cas_airframe_0
+			type = small_plane_cas_airframe_7
 			modules = {
 				fixed_main_weapon_slot = bomb_locks_2
 				engine_type_slot = engine_5_1x
@@ -746,7 +746,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "NiD 62" #
-			type = small_plane_airframe_0
+			type = small_plane_airframe_7
 			modules = {
 				fixed_main_weapon_slot = light_mg_2x
 				engine_type_slot = engine_5_1x
@@ -756,7 +756,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "D.500" #
-			type = small_plane_airframe_0
+			type = small_plane_airframe_7
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x
 				engine_type_slot = engine_5_1x
@@ -781,7 +781,7 @@ if = {
 			type = cv_small_plane_naval_bomber_airframe_0
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting_2
-				engine_type_slot = engine_5_1x
+				engine_type_slot = engine_6_1x
 				special_type_slot_1 = lmg_defense_turret
 			}
 			icon = "GFX_FRA_naval_bomber1_medium"
@@ -789,7 +789,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "D.510" #also covers D.501
-			type = small_plane_airframe_0
+			type = small_plane_airframe_7
 			modules = {
 				fixed_main_weapon_slot = light_mg_2x
 				fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_1x
@@ -800,7 +800,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Latécoère 296" #
-			type = small_plane_naval_bomber_airframe_0
+			type = small_plane_naval_bomber_airframe_7
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting-2
 				engine_type_slot = engine_5_1x
@@ -810,7 +810,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Amiot 143" #
-			type = medium_plane_airframe_0
+			type = medium_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay_2
 				fixed_auxiliary_weapon_slot_1 = bomb_locks_2
@@ -832,7 +832,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "M.B. 200" #
-			type = medium_plane_airframe_0
+			type = medium_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay_2
 				fixed_auxiliary_weapon_slot_1 = empty
@@ -1196,6 +1196,7 @@ if = {
 }
 
 1960.1.1 = {
+	add_ideas = RON_European_Union
 
 	set_technology = {
 		atomic_research = 1
@@ -1228,6 +1229,8 @@ if = {
 }
 
 1970.1.1 = {
+	add_ideas = RON_European_Union
+
 	oob = "FRA_1970"
 	set_naval_oob = "FRA_1970_naval_legacy"
 	set_politics = {
@@ -1267,6 +1270,8 @@ if = {
 }
 
 1971.1.1 = {
+	add_ideas = RON_European_Union
+
 	set_technology = {
 		RON_Thermonuclear_Bomb = 1
 		RON_SRBM1 = 1
@@ -1278,6 +1283,8 @@ if = {
 }
 
 1980.1.1 = {
+		add_ideas = RON_European_Union
+
 	retire_character = FRA_georges_pompidou
 	FRA_Valery_Giscard_dEstaing = {
 		promote_character = {
@@ -1287,6 +1294,8 @@ if = {
 }
 
 1990.1.1 = {
+		add_ideas = RON_European_Union
+
 	retire_character = FRA_Valery_Giscard_dEstaing
 	recruit_character = FRA_Francois_Mitterrand #democracy
 	FRA_Francois_Mitterrand = {
@@ -1297,6 +1306,8 @@ if = {
 }
 
 2000.1.1 = {
+		add_ideas = RON_European_Union
+
 	oob = "FRA_2000"
 	set_naval_oob = "FRA_2000_naval_legacy"
 	set_politics = {
@@ -1342,6 +1353,8 @@ if = {
 	}
 }
 2008.1.1 = {
+		add_ideas = RON_European_Union
+
 	retire_character = FRA_jacques_chirac
 	recruit_character = FRA_Nicolas_Sarkozy #democracy
 	FRA_Nicolas_Sarkozy = {
@@ -1353,6 +1366,7 @@ if = {
 
 2016.1.1 = {
 	oob = "FRA_2016"
+	add_ideas = RON_European_Union
 
 	retire_character = FRA_Nicolas_Sarkozy
 	recruit_character = FRA_Francois_Hollande #democracy
@@ -1369,6 +1383,8 @@ if = {
 }
 
 2020.1.1 = {
+	add_ideas = RON_European_Union
+
 	retire_character = FRA_Francois_Hollande
 	recruit_character = FRA_Emmanuel_Macron #democracy
 	FRA_Emmanuel_Macron = {

@@ -4,7 +4,7 @@
 @border_conflict_escalate_to_war_countdown = 145
 @border_conflict_time_until_cancelled = 360
 
-CHI_border_clashes = {
+CHI_border_clashes_category = {
 
 	WTT_border_conflict_initiate_incident = {
 		icon = border_war		
@@ -53,6 +53,7 @@ CHI_border_clashes = {
     			tag = CXJ
     			tag = CGD
     			tag = CHN
+				tag = GXC
     			tag = CGZ
     			tag = CJG
     			tag = CEX
@@ -64,6 +65,7 @@ CHI_border_clashes = {
     			tag = CFJ
     			tag = CCH
     			tag = CRH
+				tag = CLS
     			tag = CJX
     			tag = CJS
     			tag = CHB

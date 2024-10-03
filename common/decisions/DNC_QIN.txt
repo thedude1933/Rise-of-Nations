@@ -73,7 +73,8 @@ box_victory_in_war = {
 			add_ideas = {
 				QIN_outdated_army 
 				QIN_low_legitimacy
-			}
+			} 
+			set_cosmetic_tag = ZEM
 			unlock_national_focus = DNC_QIN_empress_opinion
 			unlock_national_focus = DNC_QIN_boxers
 			unlock_national_focus = DNC_QIN_seymour_expedition
@@ -386,6 +387,13 @@ QIN_gather_support_for_republicans = {
 		
 		days_remove = 25
 		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 620 }
+				create_rebellion = yes				
+
 			hidden_effect = {
 				add_political_power = -25
 				add_equipment_to_stockpile = {
@@ -429,6 +437,13 @@ QIN_gather_support_for_republicans = {
 		days_remove = 25
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 604 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -474,6 +489,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 622 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -515,6 +537,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 615 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -557,6 +586,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 600 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -599,6 +635,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 325 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -639,6 +682,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 322 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -678,6 +728,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 613 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -718,6 +775,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 603 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -759,6 +823,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 606 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -801,6 +872,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 599 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -842,6 +920,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 595 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -883,6 +968,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 593 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -924,6 +1016,13 @@ QIN_gather_support_for_republicans = {
 		}
 		complete_effect = {
 			hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 597 }
+				create_rebellion = yes				
+
 				add_political_power = -25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
@@ -970,6 +1069,12 @@ QIN_gather_support_for_republicans = {
 					type = infantry_equipment
 					amount = -200
 				}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 616 }
+				create_rebellion = yes				
 			}
 		}
 		custom_cost_trigger = {
@@ -1011,6 +1116,12 @@ QIN_gather_support_for_republicans = {
 					type = infantry_equipment
 					amount = -200
 				}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}				
+				add_to_temp_array = { rebel_state = 605 }
+				create_rebellion = yes
 			}
 		}
 		custom_cost_trigger = {
@@ -1645,20 +1756,20 @@ QIN_reformist_decision_category = {
 	}
 }
 
-china_influence_sphere = {
+china_influence_sphere = { 
 	show_map = {
 		visible = {
-			date < 1920.1.1
-			is_in_array = {
-    			array = QIN.influence_array
-    			value = ROOT
+			OR = {
+				is_literally_china = yes
+				tag = CHI
+				tag = PRC
+				is_major = yes
 			}
-			
 		}
 		complete_effect = {
 			set_country_flag = show_QIN_influence_map 
-		}
-	}
+}
+}
 	exploit_FROM_resources = {
 		cost = 25
 		state_target = yes
@@ -1992,6 +2103,17 @@ china_influence_sphere = {
     			value = ROOT
 			}
 		}
+		complete_effect = {
+			give_guarantee = DEL
+		}
+		available = {
+			OR = {
+			has_idea = superstate_size4
+			has_idea = superstate_size5
+			has_idea = superstate_size6
+			has_idea = superstate_size7
+			}
+		}
 		cost = 100
 		days_remove = 25
 		visible = {
@@ -2002,6 +2124,9 @@ china_influence_sphere = {
     				array = QIN.influence_array
     				value = ROOT
 				}
+			}
+			NOT = {
+				tag = CHI
 			}
 		}
 		fire_only_once = yes
@@ -2291,7 +2416,10 @@ china_influence_sphere = {
 			has_variable = selected_zone
 		}
 		available = {
-			
+			has_guaranteed = DEL
+			NOT = {
+				country_exists = CHI
+			}			
 			NOT = {
 				custom_trigger_tooltip = {
 					tooltip = has_no_influence_over_ZONE_tt
@@ -2350,7 +2478,6 @@ china_influence_sphere = {
 		}
 	}
 }
-
 QIN_army_reforms = {
 	QIN_reform_army = {
 		
@@ -2384,6 +2511,7 @@ QIN_army_reforms = {
 		}
 	}
 }
+
 political_actions = {
 	Play_as_SHA = {
 		visible = {
@@ -2545,7 +2673,6 @@ chinese_revolution = {
 		}
 		available = {
 			hidden_trigger = { always = no }
-
 		}
 		visible = { always = yes }
 		cancel_if_not_visible = yes
@@ -2554,10 +2681,21 @@ chinese_revolution = {
 		days_mission_timeout = CHI_days_until_uprising?2700
 
 		timeout_effect = {
+					every_state = {
+    limit = {
+        is_controlled_by = QIN
+    }
+    remove_core_of = BOX
+		}
 						CHI = {add_ideas = {CHI_uprising}}
 						QIN = {add_ideas = {QIN_uprising}}
 						QIN = {set_country_flag = revolution_started}
 						country_event = ww1_china.3
+						add_power_balance_value = {
+						    id = QIN_centralization_bop
+						    value = -0.30
+						    tooltip_side = QIN_centralization_bop_democracy
+						} 		
 		}
 
 
@@ -2576,8 +2714,16 @@ chinese_revolution = {
 			subtract_from_variable = {
 				var = uprising_strengh
 				value = 0.05
-
 			}
+			add_days_mission_timeout = {
+				mission = QIN_revolution_timer
+				days = 50
+			}
+						add_power_balance_value = {
+						    id = QIN_centralization_bop
+						    value = 0.1
+						    tooltip_side = QIN_centralization_bop_democracy
+						} 					
 		}
 	}
 	CHI_spread_uprising = {
@@ -2595,7 +2741,17 @@ chinese_revolution = {
 				var = uprising_strengh
 				value = 0.03
 			}
-
+			add_political_power = 100
+			add_stability = -0.05
+			add_days_mission_timeout = {
+				mission = QIN_revolution_timer
+				days = -50
+			}
+			add_power_balance_value = {
+			    id = QIN_centralization_bop
+			    value = -0.10
+			    tooltip_side = QIN_centralization_bop_democracy
+			} 					
 		}
 	}
 	QIN_arrest_leaders = {
@@ -2610,8 +2766,7 @@ chinese_revolution = {
 			set_country_flag = leader_arrested
 			add_days_mission_timeout = {
 				mission = QIN_revolution_timer
-				days = 50
-
+				days = 100
 			}
 		}
 	}

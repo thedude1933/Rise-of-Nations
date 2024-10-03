@@ -4729,7 +4729,7 @@ news_event = {
 	id = news.148
 	title = news.135.t
 	desc = news.148.d
-	picture = GFX_news_event_chinese_soldiers_march
+	picture = GFX_news_event_china_army_2_jos
 	fire_only_once = yes
 	major = yes
 
@@ -4843,7 +4843,8 @@ news_event = {
 	option = {
 		name = news.150.b
 		trigger = { tag = GER }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = YUG
 			generator = { 107 }
@@ -6978,7 +6979,7 @@ news_event = {
 	id = news.195
 	title = news.195.t
 	desc = news.195.d
-	picture = GFX_news_event_polish_tanks
+	picture = GFX_report_event_polish_tanks_01
 
 	major = yes
 
@@ -7530,7 +7531,7 @@ news_event = {
 	id = news.204
 	title = news.204.t
 	desc = news.204.d
-	picture = GFX_news_event_polish_tanks
+	picture = GFX_report_event_polish_tanks_01
 
 	major = yes
 
@@ -10887,7 +10888,7 @@ news_event = {
 	id = news.288
 	title = news.288.t
 	desc = news.288.desc
-	picture = GFX_news_event_chinese_soldiers_march
+	picture = GFX_news_event_china_army_2_jos
 
 	major = yes
 

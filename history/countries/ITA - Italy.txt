@@ -70,7 +70,7 @@ set_popularities = {
 }
 
  recruit_character = ITA_umberto_i
- recruit_character = ITA_vittorio_emanuele_iii_1900
+ recruit_character = ITA_vittorio_emanuele_iii
  recruit_character = ITA_benito_mussolini_1919
  recruit_character = ITA_enrico_corradini
  recruit_character = ITA_antonio_gramsci_wwi
@@ -97,11 +97,6 @@ set_popularities = {
  recruit_character = ITA_osvaldo_paladini
  recruit_character = ITA_paolo_thaon_di_revel
  recruit_character = ITA_alberico_albricci
-}
-
-1900.7.29 = {
- retire_character = ITA_umberto_i
- promote_character = ITA_vittorio_emanuele_iii_1900
 }
 
 ### WW1 Start Date
@@ -162,13 +157,12 @@ set_popularities = {
 
 	recruit_character = ITA_prince_umberto_maria
 	recruit_character = ITA_enrico_caviglia	
+
+	retire_character = ITA_umberto_i	
 }
 
 1914.1.1 = {
 	oob = "ITA_1914"
-	
-    retire_character = ITA_vittorio_emanuele_iii_1900
-    recruit_character = ITA_vittorio_emanuele_iii_1919
 }
 
 1918.1.1 = {
@@ -177,11 +171,17 @@ set_popularities = {
 
 1919.1.1 = {
 	oob = "ITA_1919"
-                    set_rule = {
-                         can_join_factions = no
-                    }
+    set_rule = {
+        can_join_factions = no
+    }
+	set_portraits = {
+		character = ITA_vittorio_emanuele_iii
+		civilian = {
+			large = "gfx/leaders/ITA/INT/Portrait_Italy_Victor_Emmanuel_III.dds"
+			small = "gfx/interface/ideas/ITA/idea_ITA_Vittorio_Emanuele_III_INT.dds"
+		}
+	}	
     recruit_character = ITA_francesco_guidi	
-
     retire_character = ITA_alberto_pollio
     retire_character = ITA_enrico_corradini
     retire_character = ITA_constantino_lazzari
@@ -198,9 +198,9 @@ set_popularities = {
 
 1921.1.1 = {
     retire_character = ITA_luigi_nava
-                    set_rule = {
-                         can_join_factions = yes
-                    }	
+    set_rule = {
+        can_join_factions = yes
+    }	
 }
 
 1922.10.30 = {
@@ -221,7 +221,98 @@ set_popularities = {
     retire_character = ITA_alberico_albricci
 }
 
+1930.1.1 = {
+	set_portraits = {
+		character = ITA_vittorio_emanuele_iii
+		civilian = {
+			large = GFX_portrait_ITA_vittorio_emanuele_III
+			small = "gfx/interface/ideas/ITA/idea_ITA_vittorio_emanuele_iii.dds"
+		}
+	}	
+}
+
 1933.1.1 = {
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+			name = "CR.32" #
+			type = small_plane_airframe_7
+			modules = {
+				fixed_main_weapon_slot = light_mg_2x
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+		}
+		create_equipment_variant = {
+			name = "Ca.111" #
+			type = small_plane_cas_airframe_7
+			modules = {
+				fixed_main_weapon_slot = small_bomb_bay
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+				obsolete = yes
+				icon = "GFX_ITA_CAS1_medium"
+		}
+		create_equipment_variant = {
+			name = "Ca.101" #
+			type = medium_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				engine_type_slot = engine_1_3x
+				special_type_slot_1 = lmg_defense_turret
+			}
+			obsolete = yes
+			icon = "GFX_ITA_early_bomber_old_medium"
+		}
+		create_equipment_variant = {
+			name = "Ca.133" #
+			type = medium_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = bomb_locks
+				engine_type_slot = engine_1_3x
+				special_type_slot_1 = lmg_defense_turret_2x
+			}
+			obsolete = yes
+			icon = "GFX_ITA_early_bomber_old_medium"
+		}
+		create_equipment_variant = {
+			name = "SM.81" #
+			type = medium_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+				engine_type_slot = engine_1_3x
+				special_type_slot_1 = lmg_defense_turret_2x
+			}
+			icon = "GFX_ITA_early_bomber_medium"
+		}
+		create_equipment_variant = {
+			name = "SM.79" #
+			type = medium_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+				engine_type_slot = engine_2_3x
+				special_type_slot_1 = lmg_defense_turret_2x
+			}
+			icon = "GFX_ITA_naval_bomber1_medium"
+		}
+		create_equipment_variant = {
+			name = "Ba.65" #
+			type = small_plane_cas_airframe_8
+			modules = {
+				fixed_main_weapon_slot = small_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = light_mg_2x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_ITA_CAS1_medium"
+		}
+
+	}
+	set_air_oob = "ITA_1936_air_bba"
 
 	if = {
 		limit = {
@@ -252,11 +343,9 @@ set_popularities = {
 		fascism = 76
 		communism = 2
 	}
- retire_character = ITA_vittorio_emanuele_iii_1919
  retire_character = ITA_antonio_gramsci_wwi
  retire_character = ITA_prince_luigi_amedeo
 
- recruit_character = ITA_vittorio_emanuele_iii
  recruit_character = ITA_ferruccio_parri
  recruit_character = ITA_palmiro_togliatti
  recruit_character = ITA_rodolfo_graziani
@@ -378,6 +467,7 @@ set_popularities = {
 
 ### END OF WW1 Start Date
 1936.1.1 = {
+	set_air_oob = "ITA_1936_air_bba"
 
 	# DIPLOMACY / WAR 36
 	if = {
@@ -697,6 +787,10 @@ set_popularities = {
 		unlock_national_focus = ITA_pan_mediterranean_army
 		unlock_national_focus = ITA_desert_warfare
 		unlock_national_focus = ITA_new_weapons
+		#unlock_national_focus = ITAB_solid_progress
+		#unlock_national_focus = ITAB_servizio_informazione_militare
+		#unlock_national_focus = ITAB_triumph_in_africa_bba
+		
 	}
 
 
@@ -851,6 +945,8 @@ set_popularities = {
 }
 
 1960.1.1 = {
+	add_ideas = RON_European_Union
+
 	set_politics = {
 		ruling_party = democratic
 		last_election = "1960.1.1"
@@ -887,6 +983,8 @@ set_popularities = {
 }
 
 1970.1.1 = {
+	add_ideas = RON_European_Union
+
 	oob = "ITA_1970"
 	set_naval_oob = "ITA_1970_naval_legacy"
 	set_politics = {
@@ -910,6 +1008,7 @@ set_popularities = {
 }
 
 1980.1.1 = {
+	add_ideas = RON_European_Union
 
     retire_character = ITA_mario_scelba
 
@@ -920,12 +1019,15 @@ set_popularities = {
 }
 
 1990.1.1 = {
+	add_ideas = RON_European_Union
 
     recruit_character = ITA_oscar_luigi_scalfaro
 
 }
 
 2000.1.1 = {
+	add_ideas = RON_European_Union
+
 	oob = "ITA_2000"
 	set_naval_oob = "ITA_2000_naval_legacy"
 	set_politics = {
@@ -966,6 +1068,8 @@ set_popularities = {
 	}
 }
 2008.1.1 = {
+	add_ideas = RON_European_Union
+
 	create_country_leader = {
 		name = "Giorgio Napolitano"
 		picture = "gfx/leaders/ITA/MD/Italy_-Giorgio_Napolitano.dds"
@@ -974,6 +1078,8 @@ set_popularities = {
 	}
 }
 2016.1.1 = {
+	add_ideas = RON_European_Union
+
 	oob = "ITA_2016"
 	create_country_leader = {
 		name = "Matteo Renzi"
@@ -990,6 +1096,8 @@ set_popularities = {
 		
 		ideology = democratic_independent
 	}
+	add_ideas = RON_European_Union
+
 	create_country_leader = {
 		name = "Giuseppe Conte"
 		picture = "gfx/leaders/ITA/MD/ITA_Giuseppe_Conte_Democratic_Populism.dds"

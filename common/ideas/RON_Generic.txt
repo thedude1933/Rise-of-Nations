@@ -1,4 +1,6 @@
 ideas = {
+
+
 	hidden_ideas = {
 
 		RI_surrender = {
@@ -16,20 +18,157 @@ ideas = {
 		}
 	}
 	country = {
-	
-			
+			war_economy_boost = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				has_war = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.01
+			}
+		}		
+			war_damages = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.1
+			}
+		}	
+			economic_recovery = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				has_government = communism
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.25
+				industrial_capacity_factory = 0.25
+				production_speed_buildings_factor = 0.05
+			}
+		}		
+			production_boost = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+				has_government = communism
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.025
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.05
+			}
+		}
+iron_shortage = {
+    allowed = {
+        always = no
+    }
+    modifier = {
+        country_resource_cost_steel = 50
+    }
+}
+
+rubber_shortage = {
+    allowed = {
+        always = no
+    }
+    modifier = {
+        country_resource_cost_rubber = 50
+    }
+}
+
+oil_shortage = {
+    allowed = {
+        always = no
+    }
+    modifier = {
+        country_resource_cost_oil = 50
+    }
+}
+
+aluminum_shortage = {
+    allowed = {
+        always = no
+    }
+    modifier = {
+        country_resource_cost_aluminium = 50
+    }
+}
+
+tungsten_shortage = {
+    allowed = {
+        always = no
+    }
+    modifier = {
+        country_resource_cost_tungsten = 50
+    }
+}
+
+chromium_shortage = {
+    allowed = {
+        always = no
+    }
+    modifier = {
+        country_resource_cost_chromium = 50
+    }
+}
+
+
 		RI_optimisation = {
 			allowed = {
 				always = no
 
 			}
-			
+			picture = great_depression
 			modifier = {
 				industrial_capacity_factory = -500
 				industrial_capacity_dockyard = -500
 				production_speed_buildings_factor = -500
 				political_power_factor = -1
+				ai_desired_divisions_factor = -0.95
+				research_speed_factor = -0.5
+				recruitable_population_factor = -0.75
+				hidden_modifier = {
+					weekly_manpower = 50
+				}
+				
 			}
+			
 		}
 
 				RI_stubborn_defense_10 = {
@@ -138,9 +277,7 @@ ideas = {
 			modifier = {
 				air_ace_generation_chance_factor = -1.0
 				air_intercept_efficiency = -0.2
-				air_intercept_efficiency = -0.2
 				air_superiority_efficiency = -0.1
-				air_close_air_support_attack_factor = -0.1
 				air_cas_efficiency = -0.1
 				air_superiority_efficiency = -0.2
 				air_escort_efficiency = -0.25
@@ -677,6 +814,42 @@ ideas = {
 				army_core_attack_factor = -0.25
 			}
 		}
+		crippled_navy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = -0.6
+				army_org_factor = -0.45
+				army_core_defence_factor = -0.45
+				army_core_attack_factor = -0.45
+			}
+		}			
+		crippled_army = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = -0.6
+				army_core_attack_factor = -0.6
+			}
+		}		
 		famine_0 = {
 			picture = raj_risk_of_famine
 			allowed = {
@@ -811,6 +984,20 @@ ideas = {
 				production_speed_infrastructure_factor = 0.03
 			}
 		}
+		RI_reliant_on_german = {
+			picture = generic_build_infrastructure
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = -0.3
+			}
+		}		
 		RI_german_mining = {
 			picture = generic_exploit_mines
 			allowed = {
@@ -1711,6 +1898,20 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+			PRC_power_consolidation = {
+			picture = triumphant_will
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				communism_drift = 0.1
+				conscription_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}		
 		RI_total_dictator = {
 			picture = generic_intel_bonus
 			allowed = {
@@ -2329,7 +2530,6 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				air_strategic_bomber_attack_factor = 0.1
 			}
 		}
 		RI_bombs_at_night = {
@@ -4796,7 +4996,6 @@ ideas = {
 			}
 
 			modifier = {
-				air_strategic_bomber_attack_factor = 0.05
 				air_strategic_bomber_bombing_factor = 0.05
 				air_bombing_targetting = 0.10
 			}
@@ -4994,19 +5193,19 @@ ideas = {
 			}
 		}
 
-		rus_economic_help = {
-			picture = generic_reserve_divisions
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			modifier = {
-				production_factory_max_efficiency_factor = 0.05
-				line_change_production_efficiency_factor = 0.05
-			}
-		}
+		#rus_economic_help = {
+		#	picture = generic_reserve_divisions
+		#	allowed = {
+		#		always = no
+		#	}
+		#	allowed_civil_war = {
+		#		always = no
+		#	}
+		#	modifier = {
+		#		production_factory_max_efficiency_factor = 0.05
+		#		line_change_production_efficiency_factor = 0.05
+		#	}
+		#}
 
 		rus_economic_help1 = {
 			picture = generic_reserve_divisions
@@ -5205,6 +5404,266 @@ ideas = {
 				max_fuel_factor = -0.1
 			}
 		}
+usa_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = USA
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+AUH_focus_on_RUS = {
+	picture = generic_economic_increase
+	allowed = {
+		always = yes
+	}
+    targeted_modifier = {
+        tag = RUS
+		attack_bonus_against = 0.1
+		defense_bonus_against = 0.1		
+	}
+}
+rus_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = RUS
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+eng_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = ENG
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+ger_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = GER
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+jap_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = JAP
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+sov_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = SOV
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+ita_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = ITA
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+ott_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = OTT
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+fra_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = FRA
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+spr_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = SPR
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+spa_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = SPA
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+prc_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = PRC
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+auh_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = AUH
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
+chi_economic_help = {
+    picture = generic_economic_increase
+    allowed = {
+        always = no
+    }
+    allowed_civil_war = {
+        always = no
+    }
+    targeted_modifier = {
+        tag = CHI
+        trade_cost_for_target_factor = -0.3
+        cic_to_target_factor = -0.25
+        mic_to_target_factor = -0.6
+        extra_trade_to_target_factor = 0.8
+    }
+
+}
+
 
 		RI_generic_industrial_revitilisation = {
 			picture = ast_naval_auxiliary_patrol
@@ -5220,16 +5679,6 @@ ideas = {
 				production_speed_buildings_factor = -0.15
 			}
 		}
-		SOV_konstantin_nechaev  = {
-			picture = ast_naval_auxiliary_patrol
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			modifier = {
-			}
-		}		
+
 	}
 }

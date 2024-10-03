@@ -10,7 +10,7 @@ set_stability = 0.7
 
 add_ideas = {
 	volunteer_only
-	partial_mobilization
+	limited_conscription
 }
 
 set_politics = {
@@ -34,7 +34,7 @@ create_country_leader = {
 	ideology = fundamentalism
 }
 
-1919.1.1 = {
+1919.7.1 = {
 	declare_war_on = {
 		target = SOV
 		type = civil_war

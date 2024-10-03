@@ -339,7 +339,8 @@ country_event = {
 	option = {
 		name = ww2tree.16.a
 		ELS = { add_state_claim = 311 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = ENG
 			generator = { 311 }
@@ -396,7 +397,8 @@ country_event = {
 		name = ww2tree.19.a
 		PRU = { add_state_claim = 912
 			add_state_claim = 913 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = BRA
 			generator = { 311 }
@@ -453,7 +455,8 @@ country_event = {
 		name = ww2tree.22.a
 		PRU = { add_state_claim = 915
 			add_state_claim = 916 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = CHL
 			generator = { 915 916 }
@@ -508,7 +511,8 @@ country_event = {
 	option = {
 		name = ww2tree.25.a
 		PRU = { add_state_claim = 688 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = CHL
 			generator = { 688 }
@@ -575,7 +579,8 @@ country_event = {
 		DOM = { add_state_claim = 308 }
 		DOM = { add_state_claim = 692 }
 		DOM = { add_state_claim = 691 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = ENG
 			generator = { 690 689 693 973 308 692 691 }
@@ -630,7 +635,8 @@ country_event = {
 	option = {
 		name = ww2tree.31.a
 		DOM = { add_state_claim = 694 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = FRA
 			generator = { 694 }
@@ -688,7 +694,8 @@ country_event = {
 		name = ww2tree.34.a
 		DOM = { add_state_claim = 686 }
 		DOM = { add_state_claim = 972 }
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = take_state_focus
 			target = USA
 			generator = { 686 972 860 }
@@ -1260,11 +1267,13 @@ country_event = {
 #				}
 #				set_autonomy = { target = MAN autonomy_state = autonomy_free }
 #			}		
-#				create_wargoal = {
+#						create_wargoal = {			
+##				expire = 100
 #    type = puppet_wargoal_focus
 #    target = MAN
 #}
-#create_wargoal = {
+#		create_wargoal = {			
+##				expire = 100
 #    type = puppet_wargoal_focus
 #    target = MEN
 #}
@@ -1272,9 +1281,12 @@ country_event = {
 #			}
 #		}
 #		}		
-		white_peace = CHI
-		white_peace = PRC
-
+		any_country = {
+			limit = {
+				has_war_with = JAP
+			}
+			white_peace = JAP
+		}
 	}
 }
 
@@ -1590,7 +1602,8 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = annex_everything
 			target = GRE
 		}
@@ -1642,7 +1655,8 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = annex_everything
 			target = YUG
 		}
@@ -2001,7 +2015,46 @@ country_event = {
 		}
 	}
 }
-
+##Japan Bogged Down In China
+country_event = {
+	id = ww2tree.900
+	picture = GFX_report_event_military_planning
+	title = ww2tree.900.title
+	desc = ww2tree.900.desc
+	trigger = {
+		tag = RUS
+		RUS = { 
+			has_war_with = UKR
+		}
+		NOT = {
+			RUS = {
+				has_idea = RON_RUS_bogged_down_in_ukraine
+			}
+		}
+	}
+	option = {
+		name = ww2tree.900.a
+		ai_chance = {
+			factor = 50
+		}
+		RUS = {
+			add_ideas = RON_RUS_bogged_down_in_ukraine
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = RUS
+				NOT = {
+					tag = RUS
+				}
+			}
+			add_ideas = RON_CSTO_member
+		}
+		UKR = {
+			add_ideas = RON_ukrainian_resistance_strategy
+			load_oob = UKR_2016
+		}
+	}
+}
 
 ##Hidden Event to Make The Allies More Receptive to Other Ideologies
 country_event = {

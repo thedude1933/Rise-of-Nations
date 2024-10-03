@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	continuous_focus_position = {
 		x = 200
-		y = 3000
+		y = 3500
 	}
 	default = no 
  reset_on_civilwar = no
@@ -1165,7 +1165,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_state_claim = 821
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = FRA
 				type = take_claimed_state
 			}
@@ -1251,7 +1252,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = GRE
 				type = annex_everything
 			}
@@ -2831,6 +2833,8 @@ focus_tree = {
 	###############################################################################################################################
 	###############################################################################################################################
 
+############################################BBA
+ ##########################################################
 	#Focus for Istituto per la Ricostruzione Industriale
 	focus = {
 		id = ITA1933_istituto_per_la_ricostruzione_industriale
@@ -3271,918 +3275,6 @@ focus_tree = {
 					target = ETH
 				}
 			}
-		}
-	}
-
-	############################
-	##### Economic Section #####
-	############################
-	focus = {
-		id = ITA_econ_reform
-		icon = GFX_goal_generic_construction
-		x = 14
-		y = 6
-		cost = 10
-		allow_branch = {
-			date > 1932.12.31
-			date < 1949.1.1
-		}
-		available = {
-			RON_can_do_focuses_1936 = yes
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
-	focus = {
-		id = ITA_expand_IRI
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = {
-			focus = ITA_econ_reform
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -2
-		y = 1
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 15
-		}
-		completion_reward = {
-			add_political_power = 50
-			add_ideas = Expanded_IRI
-		}
-	}
-	focus = {
-		id = ITA_stabilization_focus
-		icon = GFX_goal_generic_production2
-		prerequisite = {
-			focus = ITA_expand_IRI
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -3
-		y = 2
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = stabilized_econ
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_nationalization_focus
-		icon = GFX_goal_generic_production
-		prerequisite = {
-			focus = ITA_expand_IRI
-		}
-		mutually_exclusive = {
-			focus = ITA_encourage_corporatism
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -1
-		y = 2
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = nationalized_econ
-		}
-	}
-	focus = {
-		id = ITA_militarization_focus
-		icon = GFX_goal_generic_construct_military
-		prerequisite = {
-			focus = ITA_nationalization_focus
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -3
-		y = 3
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					arms_factory > 0
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					arms_factory > 0
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_fortification_effort
-		icon = city_fort
-		prerequisite = {
-			focus = ITA_militarization_focus
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -3
-		y = 5
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 0
-		}
-		completion_reward = {
-			# French border
-			158 = {
-				custom_effect_tooltip = ITA_fortification_effort_forts
-				hidden_effect = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 611
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 6780
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 9738
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 11721
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 11891
-						instant_build = yes
-					}
-				}
-			}
-			# Dodecanese
-			164 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 10007
-					instant_build = yes
-				}
-			}
-			# Sardinia
-			114 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 9863
-					instant_build = yes
-				}
-			}
-			# Sicily
-			115 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 4159
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_modernization_focus
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = {
-			focus = ITA_stabilization_focus
-		}
-		prerequisite = {
-			focus = ITA_nationalization_focus
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -1
-		y = 3
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = modernized_econ
-		}
-	}
-	focus = {
-		id = ITA_extra_tech_slot1
-		icon = GFX_focus_research
-		text = extra_tech_slot
-		prerequisite = {
-			focus = ITA_modernization_focus
-		}
-		available = {
-			NOT = {
-				has_government = democratic
-			}
-		}
-		x = -2
-		y = 4
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 15
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	focus = {
-		id = ITA_italian_highways
-		icon = GFX_goal_generic_construct_infrastructure
-		text = ITA_italian_highways
-		prerequisite = {
-			focus = ITA_modernization_focus
-			focus = ITA_laissez_faire
-		}
-		x = 0
-		y = 4
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			2 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			117 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			156 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			157 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			158 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			159 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			160 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			161 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			162 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_all_roads_rome
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = {
-			focus = ITA_italian_highways
-		}
-		x = 1
-		y = 5
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 5
-		}
-		completion_reward = {
-			2 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			117 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			156 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			157 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			158 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			159 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			160 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			161 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			162 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_prospect_for_oil
-		icon = GFX_goal_generic_production
-		text = ITA_prospect_for_oil
-		prerequisite = {
-			focus = ITA_italian_highways
-		}
-		available = {
-			ITA = {
-				controls_state = 662
-			}
-		}
-		x = -1
-		y = 5
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1946.1.1
-			}
-		}
-		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 8
-				state = 662
-			}
-		}
-	}
-	focus = {
-		id = ITA_libyan_refineries
-		icon = GFX_goal_generic_oil_refinery
-		text = ITA_libyan_refineries
-		prerequisite = {
-			focus = ITA_prospect_for_oil
-		}
-		available = {
-			ITA = {
-				controls_state = 450
-			}
-		}
-		x = -1
-		y = 6
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 4
-				state = 450
-			}
-			450 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_libyan_infrastructure
-		icon = GFX_goal_generic_construct_civilian
-		text = ITA_libyan_infrastructure
-		prerequisite = {
-			focus = ITA_prospect_for_oil
-		}
-		x = 1
-		y = 6
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			450 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-				}
-			}
-			662 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			449 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			451 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			448 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_decrease_bureaucracy
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = {
-			focus = ITA_econ_reform
-		}
-		available = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		x = 2
-		y = 1
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_political_power = -50
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_on_continent = europe
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ITA_encourage_corporatism
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = {
-			focus = ITA_decrease_bureaucracy
-		}
-		mutually_exclusive = {
-			focus = ITA_nationalization_focus
-		}
-		available = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		x = 1
-		y = 2
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = encouraged_corp
-		}
-	}
-	focus = {
-		id = ITA_dismantle_cartels
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = {
-			focus = ITA_decrease_bureaucracy
-		}
-		available = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		x = 3
-		y = 2
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = cartels_dismantled
-		}
-	}
-	focus = {
-		id = ITA_laissez_faire
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = {
-			focus = ITA_encourage_corporatism
-		}
-		available = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		x = 1
-		y = 3
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = ITA_laissez_faire
-		}
-	}
-	focus = {
-		id = ITA_extra_tech_slot
-		icon = GFX_focus_research
-		text = extra_tech_slot
-		prerequisite = {
-			focus = ITA_laissez_faire
-		}
-		available = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		x = 2
-		y = 4
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 15
-		}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	focus = {
-		id = ITA_syndicalism
-		icon = GFX_goal_generic_construction2
-		prerequisite = {
-			focus = ITA_encourage_corporatism
-		}
-		available = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		x = 3
-		y = 3
-		relative_position_id = ITA_econ_reform
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = ITA_syndicalism
 		}
 	}
 	############################
@@ -5525,6 +4617,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			RON_can_do_focuses_1936 = yes
+		}
+		allow_branch = {
+			date > 1932.12.31
+			date < 1949.1.1
+		}		
 		completion_reward = {
 			add_tech_bonus = {
 				name = paratrooper_research
@@ -5827,6 +4926,7 @@ focus_tree = {
 			factor = 40
 		}
 		completion_reward = {
+			#unlock_national_focus = ITAB_solid_progress
 			add_ideas = Imperial_Ambition_1
 			hidden_effect = {
 				ITA = {
@@ -6207,7 +5307,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = YUG
 			}
@@ -6286,7 +5387,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = GRE
 			}
@@ -6529,7 +5631,8 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = SPR
 			}
@@ -6732,7 +5835,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = POR
 			}
@@ -6905,6 +6009,7 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = fascism
+			#has_completed_focus = ITAB_undermine_the_duce
 		}
 		cancel = {
 			is_in_faction_with = GER
@@ -7084,7 +6189,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = FRA
 				type = take_state_focus
 				generator = {
@@ -7145,7 +6251,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = take_state_focus
 				target = ENG
 				generator = {
@@ -7288,7 +6395,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = GER
 			}
@@ -7363,7 +6471,6 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		available = {
 			NOT = { has_war_with = ETH }
-			has_completed_focus = ITA1933_ethiopian_war
 			NOT = { has_government = democratic }		
 			NOT = { has_government = neutrality }	
 			date < 1940.1.1
@@ -7374,6 +6481,11 @@ focus_tree = {
 						is_puppet_of = ITA
 					}
 				}
+				country_exists = AOI
+			}
+			OR = {
+			has_start_date > 1936.12.31
+			has_completed_focus = ITA1933_ethiopian_war
 			}
 		}
 		available_if_capitulated = yes
@@ -7399,6 +6511,7 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			set_country_flag = ITA_defeat_in_ethiopia_flag
 			add_ideas = ITA_failureinETH
 			white_peace = ETH
 		}
@@ -7526,7 +6639,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = ENG
 			}
@@ -7717,7 +6831,8 @@ focus_tree = {
 			factor = 15
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = GER
 			}
@@ -7747,7 +6862,8 @@ focus_tree = {
 			factor = 20
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = USA
 			}
@@ -9029,7 +8145,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = SOV
 			}
@@ -9854,7 +8971,8 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = GER
 			}

@@ -255,7 +255,6 @@ country_event = {
 		}
 		HNN = {
 			transfer_state = 602
-			transfer_state = 750
 			transfer_state = 620
 			transfer_state = 1031
 			transfer_state = 1030
@@ -268,8 +267,43 @@ country_event = {
 			add_to_faction = ANH
 			add_to_faction = SHA
 		}
+		every_state = {
+				limit = {
+					 is_owned_by = HNN 
+				}
+				add_core_of = HNN	
+		}
+		every_state = {
+				limit = {
+				is_controlled_by = FUJ
+				}
+				add_core_of = FUJ			
+		}	
+		every_state = {
+				limit = {
+					 is_controlled_by = GUC 
+				}
+				add_core_of = GUC			
+		}
+
+		every_state = {
+				limit = {
+					 is_controlled_by = SHA 
+				}
+				add_core_of = SHA			
+		}				
+			every_country = {
+					limit = {
+					is_controlled_by = ANH 
+				}
+				add_core_of = ANH			
+			}
+
+			}		
 	}
-}
+		
+	
+
 country_event = {
 	id = dnc_china.8
     title = dnc_china.8.t
@@ -596,7 +630,8 @@ country_event = {
 		name = dnc_china.15.b
 		effect_tooltip = {
 			QIN = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ROOT
 					type = annex_everything
 				}
@@ -627,7 +662,8 @@ country_event = {
 
 	option = {
 		name = dnc_china.16.a
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FROM
 			type = annex_everything
 		}
@@ -2197,8 +2233,9 @@ country_event = { #Dictator's death and rise of Warlords
 		}
 		}
 		OR = {
-			has_government = fascism
-			has_government = neutrality
+			NOT = {
+			has_government = neutrality				
+			}
 			has_civil_war = yes
 			has_stability < .65
 			has_political_power < 0
@@ -2250,11 +2287,16 @@ country_event = { #Dictator's death and rise of Warlords
 					relation = military_access
 					active = yes
 				}
+country_event = ron_decolonizationdiplo.30
+
 			}
 			ANH = {
-				load_oob = CHI_1914
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+				
+				country_event = ron_decolonizationdiplo.30
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						
@@ -2265,9 +2307,11 @@ remove_ideas = boxer_protocols_visible 						add_manpower = 10000
 				} 
 			}
 						 CHI = {
-load_oob = CHI_1914
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+country_event = ron_decolonizationdiplo.30
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 							set_capital = {
@@ -2278,21 +2322,35 @@ remove_ideas = boxer_protocols_visible 						add_manpower = 10000
 							 set_cosmetic_tag = GXC_old
 						 }
 					 CJL = {
-load_oob = TIB_1949
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
-							   } 						  transfer_state = 328
+							   } 						  
+							   transfer_state = 328
 						  transfer_state = 717
 						  						    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 						  }
+
+				GUI = {
+country_event = ron_decolonizationdiplo.30
+
+				}
+				SIC = {
+					country_event = ron_decolonizationdiplo.30
+
+				}
 					CHJ = {
-load_oob = TIB_1949
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						  transfer_state = 714
@@ -2300,91 +2358,118 @@ remove_ideas = boxer_protocols_visible 						add_manpower = 10000
 						  						    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CRH = {
-load_oob = TIB_1949
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
-							   } 						  transfer_state = 610
+							   } 						  
+							   transfer_state = 610
+							   transfer_state = 609
 						  						    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}		
 					CCH = {
-load_oob = TIB_1949
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 612
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CSY = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 611
+							   transfer_state = 608
 											    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					ZHI = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
-							   } 						transfer_state = 609
+							   } 						
 						transfer_state = 614
-						transfer_state = 608
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CSD = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 614
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 
 					CAH = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 1029
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CZJ = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 597		
 												    every_owned_state = {
 								    add_core_of = PREV
-									}			
+									}	
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CFJ = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+country_event = ron_decolonizationdiplo.30
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 598	
@@ -2393,20 +2478,24 @@ remove_ideas = boxer_protocols_visible 						add_manpower = 10000
 									}					
 					}
 					CHB = {
-load_oob = PRC_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 607			
 											    every_owned_state = {
 								    add_core_of = PREV
 									}			
+country_event = ron_decolonizationdiplo.30
+					
 					}
 					CJX = {
-load_oob = CHI_1914
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 606				
@@ -2414,99 +2503,125 @@ remove_ideas = boxer_protocols_visible 						add_manpower = 10000
 											    every_owned_state = {
 								    add_core_of = PREV
 									}					
+country_event = ron_decolonizationdiplo.30
+					
 					}
 					CGS = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 756			
 											    every_owned_state = {
 								    add_core_of = PREV
-									}				
+									}	
+
 					}
 					CNX = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 621				
+						transfer_state = 746	
+
 											    every_owned_state = {
 								    add_core_of = PREV
-									}			
+									}		
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CQH = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 616							
 					transfer_state = 754				
 											    every_owned_state = {
 								    add_core_of = PREV
-									}			
+									}	
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CXK = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 753
 											    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CSC = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 283		
 											    every_owned_state = {
 								    add_core_of = PREV
 									}		
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CGZ = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 744
 						transfer_state = 622
-						transfer_state = 746	
 								every_owned_state = {
 								    add_core_of = PREV
-									}			
+									}	
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CLS  = {
-load_oob = XSM_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 					transfer_state = 743
 											    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					JAP = {
 						puppet = CLS
 					}
 					CHN = {
-load_oob = SIK_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 1030
 						transfer_state = 1031
 						transfer_state = 620
+			transfer_state = 750							   
+
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
@@ -2515,34 +2630,181 @@ remove_ideas = boxer_protocols_visible 						add_manpower = 10000
     fascism = 25
     democratic = 50
 	}	 
+country_event = ron_decolonizationdiplo.30
 
 					}
 					CFT = {
-load_oob = SIK_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 595
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
+country_event = ron_decolonizationdiplo.30
+
 					}
 					CZL = {
-load_oob = SIK_1936
-remove_ideas = boxer_protocols_visible 						add_manpower = 10000
-						add_equipment_to_stockpile = {
+remove_ideas = boxer_protocols_visible 						
+add_manpower = 40000	
+add_ideas = warlord
+add_equipment_to_stockpile = {
 							 type = infantry_equipment_1
 							  amount = 10000 
 							   } 						transfer_state = 596
 												    every_owned_state = {
 								    add_core_of = PREV
 									}
-					}
+					
 					ANH = {white_peace = MON }		
+country_event = ron_decolonizationdiplo.30
+
  	}
+		CHI = {
+			create_faction = "Republic Of China"
+			puppet = CFT
+			CFT = {
+			add_opinion_modifier = { target = CHI modifier = large_increase }	
+			give_guarantee = CHI							
+			}
+			puppet = ZHI
+			ZHI = {
+			add_opinion_modifier = { target = CHI modifier = large_increase }			
+			give_guarantee = CHI					
+			}
+			puppet = GXC
+			GXC = {
+			add_opinion_modifier = { target = CHI modifier = large_increase }				
+			give_guarantee = CHI
+			}
+			puppet = CZL
+			CZL = {
+			add_opinion_modifier = { target = CHI modifier = large_increase }	
+			give_guarantee = CHI							
+			}
+		}
+		ANH = {
+			create_faction = "Anhui Clique"
+			puppet = CZJ
+			CZJ = {
+			add_opinion_modifier = { target = ANH modifier = large_increase }
+			give_guarantee = ANH
+			}
+			puppet = CFJ
+			CFJ = {
+			add_opinion_modifier = { target = ANH modifier = large_increase }
+			give_guarantee = ANH
+			}
+			puppet = CJX
+			CJX = {
+			add_opinion_modifier = { target = ANH modifier = large_increase }
+			give_guarantee = ANH
+			}
+			puppet = CHB
+			CHB = {
+			add_opinion_modifier = { target = ANH modifier = large_increase }
+			give_guarantee = ANH
+		}
+		}
+		CHN = {
+			create_faction = "Hunan Clique"
+			puppet = CGZ
+			CGZ = {
+			add_opinion_modifier = { target = CHN modifier = large_increase }
+			give_guarantee = CHN
+			}
+		}
+		FEN = {
+			create_faction = "Fujian Clique"
+			puppet = CJL
+			CJL = {
+			add_opinion_modifier = { target = FEN modifier = large_increase }
+			give_guarantee = FEN
+			}
+			puppet = CHJ
+			CHJ = {
+			add_opinion_modifier = { target = FEN modifier = large_increase }
+			give_guarantee = FEN
+			}
+		}
+		SHX = {
+			create_faction = "Beiyang China"
+			puppet = CSD
+			CSD = {
+			add_opinion_modifier = { target = SHX modifier = large_increase }
+			give_guarantee = SHX
+			}
+			puppet = CAH
+			CAH = {
+			add_opinion_modifier = { target = SHX modifier = large_increase }
+			give_guarantee = SHX
+			}
+			puppet = CSY
+			CSY = {
+			add_opinion_modifier = { target = SHX modifier = large_increase }
+			give_guarantee = SHX
+			}
+			puppet = CRH
+			CRH = {
+			add_opinion_modifier = { target = SHX modifier = large_increase }
+			give_guarantee = SHX
+			}
+			puppet = CCH
+			CCH = {
+			add_opinion_modifier = { target = SHX modifier = large_increase }
+			give_guarantee = SHX
+			}
+		}
+		XSM = {
+			create_faction = "Ma Clique"
+			puppet = CQH
+			CQH = {
+			add_opinion_modifier = { target = XSM modifier = large_increase }
+			give_guarantee = XSM
+			}
+			puppet = CSC
+			CSC = {
+			add_opinion_modifier = { target = XSM modifier = large_increase }
+			give_guarantee = XSM
+			}
+			puppet = CXK
+			CXK = {
+			add_opinion_modifier = { target = XSM modifier = large_increase }
+			give_guarantee = XSM
+			}
+			puppet = CNX
+			CNX = {
+			add_opinion_modifier = { target = XSM modifier = large_increase }
+			give_guarantee = XSM
+			}
+			puppet = CGS
+			CGS = {
+			add_opinion_modifier = { target = XSM modifier = large_increase }
+			give_guarantee = XSM
+			}
+			}
+		YUN = {
+			create_faction = "Yunnan Clique"
+		}
+		SIC = {
+			create_faction = "Sichuan Clique"
+			puppet = GUI
+			GUI = {
+			add_opinion_modifier = { target = SIC modifier = large_increase }
+			give_guarantee = SIC
+			}
+			puppet = CSH
+			CSH = {
+			give_guarantee = SIC
+			add_opinion_modifier = { target = SIC modifier = large_increase }
+			}
+		}
+}
+}
 	
-} 
  country_event = {
  	id = chinese_empire.24
  	title = chinese_empire.24.t
@@ -2861,83 +3123,79 @@ country_event = {
 	}
 }
 
-# country_event = {
-# 	#Guangdong-Guanxi war
-# 	id = chinese_empire.20
-# 	title = chinese_empire.20.t
-# 	desc = chinese_empire.20.d
-	
-# 	fire_only_once = yes
-	
-# 	trigger = {
-# 		date > 1921.4.1
-# 		date < 1921.4.30
-# 		tag = CHI
-# 	}
-	
-# 	immediate = {
-# 		create_wargoal = {
-# 			type = annex_everything
-# 			target = GXC
-# 		}
-		
-# 	}
-	
-# 	option = {
-# 		name = chinese_empire.20.a
-# 	}
-# }
-# country_event = { #occupation of mongolia by anhui clique
-# 	id = chinese_empire.21
-# 	title = chinese_empire.21.t
-# 	desc = chinese_empire.21.d
-	
-# 	fire_only_once = yes
-	
-# 	trigger = {
-# 		tag = ANH
-# 		date > 1919.10.1
-# 		date < 1919.11.1
-		
-# 	}
-# 	option = {
-# 		name = chinese_empire.21.a
-# 		ANH = {
-# 			create_wargoal = {
-# 				type = annex_everything
-# 				target = MON
-# 			}
-# 		}
-# 	}
-# }
-
-# country_event = { #Kuomintang formation and new GXC
-# 	id = chinese_empire.22
-# 	title = chinese_empire.22.t
-# 	desc = chinese_empire.22.d
-	
-# 	fire_only_once = yes
-	
-# 	trigger = {
-# 		tag = CHI
-# 		date > 1922.5.1
-# 		date < 1922.6.1
-# 	}
-	
-# 	option = {
-# 		name = chinese_empire.22.a
-# 		CHI = { release = GXC }
-		
-# 	}
-# }
  country_event = {
- 	id = chinese_empire.23
- 	title = chinese_empire.23.t
- 	desc = chinese_empire.23.d	 #sometimes QIN loses focus tree after surrender
+ 	#Guangdong-Guanxi war
+ 	id = chinese_empire.38
+ 	title = chinese_empire.38.t
+ 	desc = chinese_empire.38.d	
+ 	fire_only_once = yes	
+ 	trigger = {
+ 		date > 1921.4.1
+ 		date < 1921.4.30
+ 		tag = GUC
+ 	}	
+ 	immediate = {
+ 				create_wargoal = {			
+				expire = 100
+ 			type = annex_everything
+ 			target = GXC
+ 		}		
+ 	}	
+ 	option = {
+ 		name = chinese_empire.38.a
+ 	}
+ }
+ country_event = { #occupation of mongolia by anhui clique
+ 	id = chinese_empire.34
+ 	title = chinese_empire.34.t
+ 	desc = chinese_empire.34.d	
+ 	fire_only_once = yes	
+ 	trigger = {
+ 		tag = ANH
+ 		date > 1919.10.1
+ 		date < 1919.11.1		
+ 	}
+ 	option = {
+ 		name = chinese_empire.34.a
+ 		ANH = {
+ 					create_wargoal = {			
+				expire = 100
+ 				type = annex_everything
+ 				target = MON
+ 			}
+ 		}
+ 	}
+ }
+
+ country_event = { #Kuomintang formation and new GXC
+ 	id = chinese_empire.35
+ 	title = chinese_empire.35.t
+ 	desc = chinese_empire.35.d	
+ 	fire_only_once = yes	
+ 	trigger = {
+ 		tag = CHI
+ 		date > 1922.5.1
+ 		date < 1922.6.1
+ 	}	
+ 	option = {
+ 		name = chinese_empire.35.a
+ 		CHI = { release = GXC }		
+		CHI = {
+			set_politics = {
+    ruling_party = democratic
+    elections_allowed = no
+		}
+ 	}
+ }
+ }
+ country_event = {
+ 	id = chinese_empire.36
+ 	title = chinese_empire.36.t
+ 	desc = chinese_empire.36.d	 #sometimes QIN loses focus tree after surrender
  	fire_only_once = yes	
 	is_triggered_only = yes
  	option = {
- 		name = chinese_empire.23.a		
+ 		name = chinese_empire.36.a		
 		load_focus_tree = RON_Qing_China
 		unlock_national_focus = DNC_QIN_boxers
 		unlock_national_focus = DNC_QIN_ally_with_boxers
@@ -2949,3 +3207,51 @@ country_event = {
 		unlock_national_focus = DNC_QIN_horrific_loss
  	}
  }
+ country_event = { #Should we send supplies to the chinese empire
+ 	id = chinese_empire.37
+ 	title = chinese_empire.37.t
+ 	desc = chinese_empire.37.d	
+ 	fire_only_once = yes	
+ 	trigger = {
+ 		tag = CHI
+ 		date > 1922.5.1
+ 		date < 1922.6.1
+ 	}	
+ 	option = {
+ 		name = chinese_empire.37.a
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 1000
+    target = QIN
+}		
+		}
+ 	option = {
+ 		name = chinese_empire.37.b
+
+		}		
+ }
+ #FROM assumed control over part of our influence sphere
+country_event = {
+	id = dnc_china.50
+	title = dnc_china.17.t
+	desc = dnc_china.17.d
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = dnc_china.17.a
+		ai_chance = {
+			base = 10000
+		}
+		add_to_variable = {
+			number_of_zones_controlled_in_QIN = -1
+		}
+		ROOT = {
+			add_to_variable = {
+				number_of_zones_controlled_in_QIN = 1
+			}
+		}
+		QIN_change_zone_influence = yes
+	}
+
+}

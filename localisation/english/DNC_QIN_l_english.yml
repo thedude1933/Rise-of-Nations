@@ -302,6 +302,17 @@ dnc_china.18.t:0 "[FROM.GetName] wants to open a concession in [QIN_GetZoneName]
 dnc_china.18.d:0 "The [FROM.GetAdjective] government sent us a telegram in which they declare that they want to open a concession inside our territory."
 dnc_china.18.a:0 "Welcome them"
 dnc_china.18.b:0 "We don't need foreigners !"
+chinese_empire.34.t:0 "Mongolia Occupied by the Anhui Clique"
+chinese_empire.34.d:0 "The Anhui Clique, led by Duan Qirui, has seized control of Mongolia, further expanding their influence in the region. This occupation has sparked outrage among Mongolian nationalists and increased tensions between various factions vying for power in China."
+chinese_empire.34.a:0 "We must respond decisively to secure our interests in the region!"
+chinese_empire.35.t:0 "Kuomintang Formation and New Government of the Guangxi Clique"
+chinese_empire.35.d:0 "The Kuomintang (KMT), or Chinese Nationalist Party, has been formally established, signaling a new era in Chinese politics. Under the leadership of Sun Yat-sen, the KMT aims to unify China and end imperial rule. Meanwhile, the Guangxi Clique, led by Li Zongren, has formed a new government in Guangxi province, challenging the existing power structures and paving the way for a new chapter in Chinese history."
+chinese_empire.35.a:0 "We must adapt to these changes and navigate the shifting political landscape!"
+chinese_empire.37.t:0 "Should we send supplies to the Chinese Empire?"
+chinese_empire.37.d:0 "The Chinese Empire is facing numerous challenges and requests aid in the form of supplies. Should we support them in their time of need?"
+chinese_empire.37.a:0 "Yes, we should send supplies."
+chinese_empire.37.b:0 "No, we should not send supplies."
+
 chinese_empire.26.t:0 "Empire Of China Demands Korea be released!"
 chinese_empire.26.d:0 "China has demanded we free korea, what should be our next course of action"
 chinese_empire.26.a:0 "We will return it to them!"
@@ -326,6 +337,12 @@ chinese_empire.32.a:0 "We will stamp out the rebels!"
 chinese_empire.33.t:0 "Our leader was shot!"
 chinese_empire.33.d:0 "Due to instability in the region our leader has been killed causing another wave of rebellions in our once great nation!"
 chinese_empire.33.a:0 "We have fallen"
+
+
+chinese_empire.38.t:0 "Guangdong-Guangxi War"
+chinese_empire.38.d:0 "A conflict has erupted between the provinces of Guangdong and Guangxi, leading to widespread violence and instability in the region. Both sides are mobilizing their forces and seeking allies to support their cause."
+chinese_empire.38.a:0 "We will win this war!"
+
 ## INFLUENCE ZONES NAMES
 QIN_Zone1_Name:0 "Tannu Tuva"
 QIN_Zone2_Name:0 "Norhern Mongolia"
@@ -398,6 +415,7 @@ investigation_is_underway:0 "§RAn Investigation is Underway§!"
 no_investigation_underway:0 "§GNo Investigation is Underway§!"
 QIN_smuggle_weapons:0 "Smuggle Weapons at the eyes of the Foreigners"
 china_influence_sphere:0 "Foreign Influence in China"
+china_influence_sphere_desc:0 "§CForeign Influence in Zones of §G[QIN.GetName]§!\nThis section tracks foreign influence within different zones of your nation. Maintaining control is crucial for national stability and autonomy.\n\n§W- **Zone Name**: §G[QIN_GetZoneName]§!\n  The specific zone where foreign influence is detected.\n\n- **Influence Level**: §G[?zone_influence_level]§!%\n  Degree of foreign control or influence in china.\n\n- **Resistance Level**: §G[?zone_resistance_level]§!%\n  Local resistance to foreign influence in china.\n\n- **Economic Impact**: §G[?zone_economic_impact]§!%\n  Impact of our market on china's economy.\n\n- **Military Presence**: §G[?zone_military_presence]§! units\n  Number of foreign units stationed in china.\n\n- **Cultural Influence**: §G[?zone_cultural_influence]§!%\n  Extent of foreign cultural impact in china.\n"
 show_map:0 "Open the Influence Map"
 take_control_of_ZONE:0 "Assume Influence over [QIN_GetZoneName]"
 boxer_protocols_weapons_malus_negated_tt:0 "Weapon Production will §Ynot§! be affected by the Boxer Protocols, Daily Foreign Suspicion: §R+1.00§!"
@@ -496,3 +514,35 @@ BOX_disorganized_rebellion:0 "Disorganized Rebellion"
 BOX_xenophobic_zeal:0 "Xenophobic Zeal"
 #Boxer flag
 BOX_expand_rebellion:0 "Ready to Expand the Rebellion"
+CHI_uprising:0 "Chinese Uprising"
+QIN_uprising:0 "Chinese Surprise"
+#
+increase_military_presence:0 "Increase Military Presence"
+increase_military_presence_desc:0 "Deploy additional units to §G[QIN_GetZoneName]§! to bolster control and diminish foreign influence."
+
+boost_local_economy:0 "Boost Local Economy"
+boost_local_economy_desc:0 "Invest in infrastructure and resources in §G[QIN_GetZoneName]§! to counteract economic impacts and stabilize the area."
+
+enhance_cultural_integration:0 "Enhance Cultural Integration"
+enhance_cultural_integration_desc:0 "Promote national culture and traditions in §G[QIN_GetZoneName]§! to reduce the impact of foreign cultural influence."
+
+support_local_resistance:0 "Support Local Resistance"
+support_local_resistance_desc:0 "Provide support to local resistance groups in §G[QIN_GetZoneName]§! to strengthen resistance against foreign control."
+
+negotiate_with_foreign_powers:0 "Negotiate with Foreign Powers"
+negotiate_with_foreign_powers_desc:0 "Engage in diplomacy to reduce the presence and influence of foreign powers in §G[QIN_GetZoneName]§!."
+
+conduct_propaganda_campaigns:0 "Conduct Propaganda Campaigns"
+conduct_propaganda_campaigns_desc:0 "Initiate campaigns in §G[QIN_GetZoneName]§! to sway public opinion and mitigate foreign cultural and political impacts."
+
+improve_infrastructure:0 "Improve Infrastructure"
+improve_infrastructure_desc:0 "Upgrade facilities and transport in §G[QIN_GetZoneName]§! to boost local productivity and reduce foreign economic impact."
+
+strengthen_alliances:0 "Strengthen Alliances"
+strengthen_alliances_desc:0 "Form alliances with local leaders in §G[QIN_GetZoneName]§! to gain support and reduce foreign influence."
+
+increase_surveillance:0 "Increase Surveillance"
+increase_surveillance_desc:0 "Enhance monitoring in §G[QIN_GetZoneName]§! to better manage foreign activities and prevent undue influence."
+
+promote_national_pride:0 "Promote National Pride"
+promote_national_pride_desc:0 "Encourage patriotism and loyalty in §G[QIN_GetZoneName]§! to counteract foreign cultural influence."

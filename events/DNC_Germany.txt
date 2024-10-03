@@ -770,7 +770,8 @@ country_event = {
 			limit = {
 				tag = FRA
 			}
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = GER
 				type = take_state_focus
 				generator = {
@@ -797,7 +798,8 @@ country_event = {
 			limit = {
 				tag = ENG
 			}
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = GER
 				type = take_state_focus
 				generator = {
@@ -850,7 +852,8 @@ country_event = {
 		name = "Never!"
 
 		GER = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				target = COG
 				type = annex_everything
 			}
@@ -940,7 +943,8 @@ country_event = {
 		}
 		effect_tooltip = {
 			GER = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = POR
 					type = take_state_focus
 					generator = {
@@ -965,7 +969,8 @@ country_event = {
 
 	option = {
 		name = "Well..."
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = POR
 			type = take_state_focus
 			generator = {
@@ -1051,7 +1056,8 @@ country_event = {
 		}
 		effect_tooltip = {
 			GER = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = ITA
 					type = take_state_focus
 					generator = {
@@ -1095,7 +1101,8 @@ country_event = {
 
 	option = {
 		name = "Then War it is!"
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = ITA
 			type = take_state_focus
 			generator = {
@@ -1235,7 +1242,10 @@ country_event = {
 		every_state = {
 			limit = {
 				is_controlled_by = FRA
-				is_claimed_by = GER
+				OR = {
+					is_claimed_by = GER
+					is_core_of = GER
+				}
 			}
 			GER = {
 				transfer_state = PREV
@@ -1247,7 +1257,8 @@ country_event = {
 
 		effect_tooltip = {
 			GER = {
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					target = FRA
 					type = take_claimed_state
 				}
@@ -1268,7 +1279,8 @@ country_event = {
 
 	option = {
 		name = "To Paris!"
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			target = FRA
 			type = take_claimed_state
 		}
@@ -1287,7 +1299,16 @@ country_event = {
 		every_state = {
 			limit = {
 				is_controlled_by = FRA
-				is_claimed_by = GER
+				OR = {
+					state = 28
+					state = 817
+					state = 17
+					state = 815
+					state = 814
+					state = 816
+					state = 29
+					state = 1089
+				}
 			}
 			GER = {
 				transfer_state = PREV

@@ -642,12 +642,12 @@ country_event = {
 		date < 1950.2.1
 		has_global_flag = RON_Axis_Victory
 	}
-	immediate = {
-		start_civil_war = {
-			ideology = communism
-			size = 0.45
-		}
-	}
+	#immediate = {
+	#	start_civil_war = {
+	#		ideology = communism
+	#		size = 0.45
+	#	} 
+	#}
 
 	option = {
 		name = cw_axis_victory.22
@@ -1670,7 +1670,8 @@ country_event = {
 			}
 		}
 		else = {
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = annex_everything
 				target = MEX
 			}
@@ -2144,7 +2145,9 @@ country_event = {
 		date < 1959.2.1
 		tag = GER
 		has_government = fascism
-		has_country_leader = adolf_hitler
+		has_country_leader = {
+			character = GER_adolf_hitler
+		}
 	}
 	fire_only_once = yes
 	option = {

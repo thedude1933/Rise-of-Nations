@@ -2109,7 +2109,8 @@ country_event = {
 						target = FROM
 						autonomy_state = autonomy_free
 					}
-					create_wargoal = {
+							create_wargoal = {			
+				expire = 100
 						target = ROOT
 						type = puppet_wargoal_focus
 					}
@@ -2251,7 +2252,7 @@ add_namespace = kr.political
 # Check after a war whether we should be demobilizing
 # country_event = {
 # 	id = kr.political.120
-# 	immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.120" }
+# 	#immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.120" }
 
 # 	hidden = yes
 # 	is_triggered_only = yes
@@ -2291,12 +2292,12 @@ add_namespace = kr.political
 
 country_event = {
 	id = kr.political.121
-	immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.121" }
 
 	hidden = yes
 	is_triggered_only = yes
 
 	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event kr.political.121"		
 		calculate_maximum_divisions = yes
 		if = {
 			limit = {
@@ -2335,7 +2336,7 @@ country_event = {
 # Check whether a player should have mobilisation penalties
 country_event = {
 	id = kr.political.122
-	immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.122" }
+	#immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.122" }
 
 	hidden = yes
 	is_triggered_only = yes
@@ -2360,7 +2361,7 @@ country_event = {
 # Check whether a player should still have mobilisation penalties
 country_event = {
 	id = kr.political.123
-	immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.123" }
+	#immediate = { log = "[GetDateText]: [Root.GetName]: event kr.political.123" }
 
 	hidden = yes
 	is_triggered_only = yes
@@ -2844,9 +2845,9 @@ unit_leader_event = {
 #Become a puppet
 country_event = { 
 	id = generic.2088
-	title = generic.20.t
+	title = generic.2008.t
 	desc = {
-		text = generic.20.d_friends
+		text = generic.2008.d_friends
 		trigger = {
 			has_opinion = {
 				target = FROM
@@ -2855,7 +2856,7 @@ country_event = {
 		}
 	}
 	desc = {
-		text = generic.20.d_enemies
+		text = generic.2008.d_enemies
 		trigger = {
 			NOT = { 
 				has_opinion = {
@@ -2870,7 +2871,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = generic.20.a
+		name = generic.2008.a
 		trigger = {
 			NOT = { 
 				has_opinion = {
@@ -2920,7 +2921,7 @@ country_event = {
 	}
 
 	option = {
-		name = generic.20.b
+		name = generic.2008.b
 		trigger = {
 			has_opinion = {
 				target = FROM
@@ -2968,7 +2969,7 @@ country_event = {
 	}
 
 	option = {
-		name = generic.20.c
+		name = generic.2008.c
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -2983,7 +2984,8 @@ country_event = {
 		}
 		effect_tooltip = { 
 			FROM = { 
-				create_wargoal = {
+						create_wargoal = {			
+				expire = 100
 					type = puppet_wargoal_focus
 					target = ROOT
 				}
@@ -3011,7 +3013,8 @@ country_event = {
 			factor = 1
 		}
 		ROOT = { 
-			create_wargoal = {
+					create_wargoal = {			
+				expire = 100
 				type = puppet_wargoal_focus
 				target = FROM
 			}
@@ -3138,7 +3141,8 @@ country_event = {
 		ai_chance = {
 			factor = 90
 		}
-		create_wargoal = {
+				create_wargoal = {			
+				expire = 100
 			type = annex_everything 
 			target = FROM
 		}
@@ -3165,6 +3169,7 @@ country_event = {
 		name = generic.214.b
 	}	
 }
+
 # accepted demands
 country_event = {
 	id = generic.215 #THIS IS A DEBUG EVENT PLEASE FIX RUSSIA CORE ISSUE
